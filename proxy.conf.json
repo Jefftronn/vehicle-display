@@ -1,0 +1,11 @@
+{
+  "/api-bumper": {
+    "target": "https://api.bumper.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api-bumper": ""
+    }
+  }
+}
