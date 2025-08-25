@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-dialog {
+  border-radius: 0.5rem !important; /* Adjust as needed */
+  overflow: hidden; /* Prevent content from spilling outside rounded edges */
+  background-color: #f9fafb; /* light gray */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+:root {
+  /* Menu container */
+  --mat-menu-container-color: #ffffff;             /* background */
+  --mat-menu-container-shape: 0.25rem;                 /* border-radius */
+  --mat-menu-container-elevation-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
+                                                0 2px 4px -2px rgba(0,0,0,0.1);
+
+  /* Menu items */
+  --mat-menu-item-label-text-color: #374151;       /* gray-700 */
+  --mat-menu-item-label-text-size: 0.875rem;       /* text-sm */
+  --mat-menu-item-label-text-weight: 400;          /* normal */
+
+  /* Hover state */
+  --mat-menu-item-hover-state-layer-color: #f3f4f6;  /* gray-100 */
+  --mat-menu-item-hover-label-text-color: #111827;   /* gray-900 */
+
+  /* Focus/active state */
+  --mat-menu-item-focus-state-layer-color: #e5e7eb;  /* gray-200 */
+  --mat-menu-item-focus-label-text-color: #111827;
+}
+
+/* Optional: Dark mode overrides */
+.dark {
+  --mat-menu-container-color: #1f2937;          /* gray-800 */
+  --mat-menu-item-label-text-color: #d1d5db;    /* gray-300 */
+  --mat-menu-item-hover-state-layer-color: #374151;
+  --mat-menu-item-hover-label-text-color: #ffffff;
+}
