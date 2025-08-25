@@ -1,0 +1,33 @@
+/* archive-modal.css */
+:host {
+  display: block;
+}
+
+mat-dialog-content {
+  padding: 24px;
+  font-size: 14px;
+  color: #374151; /* Tailwind gray-700 style */
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  gap: 8px;
+}
+
+button[mat-button] {
+  border-radius: 8px;
+  padding: 6px 16px;
+}
+
+button[mat-button].primary {
+  background-color: #2563eb; /* Tailwind blue-600 */
+  color: white;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px; /* Adjust as needed */
+  right: 8px; /* Adjust as needed */
+}
