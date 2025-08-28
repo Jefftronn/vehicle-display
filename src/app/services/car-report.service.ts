@@ -15,7 +15,7 @@ export class CarReportService {
 
   constructor(private http: HttpClient) { }
 
-  getCarReports(vin: string): Observable<CarRecord> {
+  public getCarReports(vin: string): Observable<CarRecord> {
     const url = `${this.baseProxyUrl}?vin=${vin}`;
 
     const headers = new HttpHeaders({
@@ -29,6 +29,14 @@ export class CarReportService {
     return this.http.get<CarRecord>(url, { headers }).pipe(
       catchError(this.handleError)
     );
+  }
+
+  public getCarReportsFromSavedList() {
+
+  }
+
+  public editCarReportStatus() {
+
   }
 
   private handleError(error: HttpErrorResponse) {

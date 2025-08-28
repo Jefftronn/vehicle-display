@@ -17,7 +17,6 @@ export class CarReportDetail implements OnInit {
     const vin = this.route.snapshot.paramMap.get('vin'); // gets VIN from URL
     if (vin) {
       this.carVin = vin;
-      console.log(vin);
     }
   }
 

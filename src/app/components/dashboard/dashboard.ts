@@ -9,6 +9,8 @@ import { Observable, map, catchError, of, tap } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ArchiveModal } from '../archive-modal/archive-modal';
 import { MatIconModule } from '@angular/material/icon';
+import { SavedList } from '../../models/saved-list.model';
+import { ListService } from '../../services/list.service';
 
 declare const initFlowbite: any; // Flowbite exposes this globally when using CDN
 
@@ -23,7 +25,9 @@ declare const initFlowbite: any; // Flowbite exposes this globally when using CD
 export class Dashboard implements OnInit, AfterViewInit {
   readonly menuTrigger = viewChild.required(MatMenuTrigger);
   readonly dialog = inject(MatDialog);
-
+  public lists$!: Observable<SavedList[]>;
+  public loading$!: Observable<boolean>;
+  public error$!: Observable<string | null>;
   public errorMessage?: string;
   public loading = false;
 
@@ -34,10 +38,12 @@ export class Dashboard implements OnInit, AfterViewInit {
   public automobile$!: Observable<Automobile[] | undefined>;
   private initialized = false;
 
-
-  constructor(private carReportService: CarReportService, private router: Router) { }
+  constructor(private carReportService: CarReportService, private router: Router, private listService: ListService) { }
 
   ngOnInit(): void {
+    this.lists$ = this.listService.lists$;
+    this.loading$ = this.listService.loading$;
+    this.error$ = this.listService.error$;
     this.fetchCarReports('ZPBUC3ZL2RLA31892');
   }
 
@@ -85,7 +91,7 @@ export class Dashboard implements OnInit, AfterViewInit {
     this.router.navigate(['/car', vin])
   }
 
-  public openDialog() {
+  public openArchiveDialog() {
     const dialogRef = this.dialog.open(ArchiveModal, {
       autoFocus: false,
       width: '400px',
