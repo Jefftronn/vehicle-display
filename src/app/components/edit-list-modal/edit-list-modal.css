@@ -21,7 +21,7 @@ button[mat-button] {
 }
 
 button[mat-button].primary {
-  background-color: #dc2626 ;
+  background-color: #2563eb;
   color: white;
 }
 

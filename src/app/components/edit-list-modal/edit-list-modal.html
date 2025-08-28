@@ -1,0 +1,52 @@
+<form [formGroup]="editListForm" (ngSubmit)="onSubmit()" class="p-6">
+  <!-- Header -->
+  <div class="flex justify-between items-center border-b pb-3 mb-4">
+    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Edit {{ data.name }} List</h2>
+    <button type="button" mat-dialog-close class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+      ✕
+    </button>
+  </div>
+
+  <!-- Body -->
+  <div class="space-y-4">
+    <div>
+      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        List Name
+      </label>
+      <input id="name" type="text" formControlName="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+               dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
+               dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter list name" required />
+      <p *ngIf="editListForm.get('name')?.hasError('required') && editListForm.get('name')?.touched"
+        class="mt-2 text-sm text-red-600 dark:text-red-500">
+        Name is required
+      </p>
+    </div>
+
+    <div>
+      <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Description
+      </label>
+      <textarea id="description" rows="3" formControlName="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+               dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
+               dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="flex justify-end gap-2 mt-6">
+    <button type="button" (click)="onCancel()" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 
+             rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:ring-4 focus:outline-none
+             focus:ring-blue-300 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+             dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600">
+      Cancel
+    </button>
+
+    <button type="submit" [disabled]="editListForm.invalid" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg
+             hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300
+             disabled:opacity-50 disabled:cursor-not-allowed">
+      Save
+    </button>
+  </div>
+</form>
