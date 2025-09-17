@@ -216,7 +216,7 @@
                       d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
                   </svg>
                 </button>
-                <mat-menu #menu="matMenu">
+                <mat-menu #menu="matMenu" [id]="'dropdown-' + auto.entities.vehicles.automobiles[0].vin">
                   <button mat-menu-item (click)="viewCarDetails(auto.entities.vehicles.automobiles[0].vin)">View
                     Details</button>
                   <button mat-menu-item [matMenuTriggerFor]="savedLists">
