@@ -66,7 +66,7 @@ export class Dashboard implements OnInit, AfterViewInit {
 
         const cars = Array.from({ length: 10 }, (_, i) => {
           const clone = JSON.parse(JSON.stringify(data));
-          clone.entities.vehicles.automobiles[0].vin = this.randomVin(baseVin, i);
+          clone.entities.vehicles.automobiles[0].vin = this.randomVin(baseVin);
           return clone;
         });
         return cars;
@@ -103,9 +103,20 @@ export class Dashboard implements OnInit, AfterViewInit {
     dialogRef.afterClosed().subscribe(() => this.menuTrigger().focus());
   }
 
-  private randomVin(baseVin: string, i: number): string {
-    // take first 10 chars of base VIN, add 7 random alphanumerics
-    const randomPart = Math.random().toString(36).substring(2, 9).toUpperCase();
-    return baseVin.slice(0, 10) + randomPart;
+  private randomVin(baseVin: string): string {
+    const chars = 'ABCDEFGHJKLMNPRSTUVWXYZ0123456789'; // valid VIN chars
+    let randomPart = '';
+    while (randomPart.length < 7) {
+      const idx = Math.floor(Math.random() * chars.length);
+      randomPart += chars[idx];
+    }
+
+    // first 8 chars of baseVin
+    const prefix = baseVin.slice(0, 8).toUpperCase().replace(/[IOQ]/g, 'X');
+
+    // 9th char = placeholder check digit
+    const checkDigit = 'X';
+
+    return (prefix + checkDigit + randomPart).slice(0, 17);
   }
 }

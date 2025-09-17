@@ -2,11 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
 import { AuthService } from '../../services/auth.service';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login-page',
+  standalone: true,
   imports: [
-    ReactiveFormsModule  // Needed for formGroup, formControlName
+    ReactiveFormsModule, MatSnackBarModule
   ],
   templateUrl: './login-page.html',
   styleUrl: './login-page.css'
@@ -21,7 +23,7 @@ export class LoginPage implements OnInit {
     password: ['', [Validators.required]],
   })
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private snackbar: MatSnackBar) { }
 
   public ngOnInit(): void {
   }
@@ -31,6 +33,15 @@ export class LoginPage implements OnInit {
       const { username, password } = this.loginForm.value;
       this.handleLogin({ username, password });
     }
+  }
+
+  public openSnackBar(message: string, action: string = 'Close') {
+    this.snackbar.open(message, 'Close', {
+      duration: 4000,
+      horizontalPosition: 'center',   // 'start' | 'center' | 'end' | 'left' | 'right'
+      verticalPosition: 'bottom',        // 'top' | 'bottom'
+      panelClass: ['error-snackbar']
+    });
   }
 
   private handleLogin(data: any): void {
@@ -44,8 +55,10 @@ export class LoginPage implements OnInit {
       error: (err) => {
         this.loading = false;
         this.errorMessage = err.message;
-        console.log(this.errorMessage);
+        this.loginForm.reset();
+        console.log(this.errorMessage, err);
         // this.carData = undefined;
+        this.openSnackBar(this.errorMessage ?? "Server Error. Please try again later.")
       }
     })
   }
