@@ -51,7 +51,6 @@ export class CarReportService {
   }
 
   public getVinToPlate(vin: string): Observable<CarRecord> {
-    console.log('working')
     const url = `${this.baseVinToPlateUrl}?vin=${vin}`;
 
     const headers = new HttpHeaders({

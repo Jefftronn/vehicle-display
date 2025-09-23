@@ -1,8 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from "@angular/router";
-import { AuthService } from '../../services/auth.service';
+import { AuthService, ResetPasswordData } from '../../services/auth.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { ResetPasswordModal } from '../reset-password-modal/reset-password-modal';
 
 @Component({
   selector: 'app-login-page',
@@ -15,15 +17,15 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 })
 export class LoginPage implements OnInit {
   public errorMessage?: string;
-  public loading?: boolean = false;
+  public loading: boolean = false;
   public backgroundImage = '/assets/images/pexels-pixabay-164634.jpg';
   private fb = inject(FormBuilder);
   public loginForm = this.fb.group({
-    username: ['', [Validators.required, Validators.email]],
+    username: ['', [Validators.required]],
     password: ['', [Validators.required]],
   })
 
-  constructor(private authService: AuthService, private router: Router, private snackbar: MatSnackBar) { }
+  constructor(private authService: AuthService, private router: Router, private snackbar: MatSnackBar, private dialog: MatDialog) { }
 
   public ngOnInit(): void {
   }
@@ -38,9 +40,24 @@ export class LoginPage implements OnInit {
   public openSnackBar(message: string, action: string = 'Close') {
     this.snackbar.open(message, 'Close', {
       duration: 4000,
-      horizontalPosition: 'center',   // 'start' | 'center' | 'end' | 'left' | 'right'
-      verticalPosition: 'bottom',        // 'top' | 'bottom'
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
       panelClass: ['error-snackbar']
+    });
+  }
+
+  public openResetPasswordModal(openedFromLogin: boolean) {
+    const dialogRef = this.dialog.open(ResetPasswordModal, {
+      width: '400px',
+      panelClass: 'custom-dialog',
+      data: {
+        fromLogin: openedFromLogin
+      } as ResetPasswordData
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+      }
     });
   }
 

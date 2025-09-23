@@ -7,5 +7,11 @@
     "pathRewrite": {
       "^/api-bumper": ""
     }
+  },
+    "/api": {
+    "target": "https://utapi-ir.insure-rite.com/utauthapi",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
 }
