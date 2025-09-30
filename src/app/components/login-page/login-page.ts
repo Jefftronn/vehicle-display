@@ -5,12 +5,13 @@ import { Router } from "@angular/router";
 import { AuthService, ResetPasswordData } from '../../services/auth.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ResetPasswordModal } from '../reset-password-modal/reset-password-modal';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
   imports: [
-    ReactiveFormsModule, MatSnackBarModule
+    ReactiveFormsModule, MatSnackBarModule, CommonModule
   ],
   templateUrl: './login-page.html',
   styleUrl: './login-page.css'
@@ -75,7 +76,7 @@ export class LoginPage implements OnInit {
         this.loginForm.reset();
         console.log(this.errorMessage, err);
         // this.carData = undefined;
-        this.openSnackBar(this.errorMessage ?? "Server Error. Please try again later.")
+        this.openSnackBar(this.errorMessage ?? "Login failed. Please try again later.")
       }
     })
   }

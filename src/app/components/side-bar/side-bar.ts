@@ -43,6 +43,10 @@ export class SideBar implements OnInit {
     this.router.navigate(['/dashboard'])
   }
 
+  public viewHouseHolds() {
+    this.router.navigate(['/household'])
+  }
+
   public onDropDownClick() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
