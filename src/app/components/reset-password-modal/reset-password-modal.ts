@@ -21,11 +21,12 @@ export class ResetPasswordModal implements OnInit {
   public resetPasswordForm: FormGroup;
   public errorMessage?: string;
   public rules = [
-    { label: '1 Lower-Case', key: 'hasLowerCase' },
-    { label: '1 Upper-Case', key: 'hasUpperCase' },
-    { label: '1 Number', key: 'hasNumber' },
-    { label: '1 Special Character (#?!@$%^&*-.,)', key: 'hasSpecialChar' },
-    { label: 'More than 10 Characters', key: 'hasMinLength' },
+    { label: 'At least 1 uppercase', key: 'hasUpperCase' },
+    { label: 'At least 1 lowercase', key: 'hasLowerCase' },
+    { label: 'At least 1 number', key: 'hasNumber' },
+    { label: 'At least 1 special character (#?!@$%^&*-.,)', key: 'hasSpecialChar' },
+    { label: 'At least 10 characters long', key: 'hasMinLength' },
+    { label: 'Cannot contain username', key: 'containsUsername' },
   ];
 
   public ruleStatus: Record<string, boolean> = {
@@ -34,6 +35,7 @@ export class ResetPasswordModal implements OnInit {
     hasNumber: false,
     hasSpecialChar: false,
     hasMinLength: false,
+    containsUsername: false,
   };
 
   constructor(
@@ -46,7 +48,7 @@ export class ResetPasswordModal implements OnInit {
 
     this.resetPasswordForm = this.fb.group({
       username: [data.fromLogin ? '' : data.username, Validators.required],
-      password: ['', [Validators.required, this.passwordValidator]],
+      password: ['', [Validators.required, this.passwordValidatorFactory(data)]],
     })
   }
 
@@ -62,6 +64,7 @@ export class ResetPasswordModal implements OnInit {
           hasNumber: false,
           hasSpecialChar: false,
           hasMinLength: false,
+          containsUsername: false,
         };
         return;
       }
@@ -72,6 +75,7 @@ export class ResetPasswordModal implements OnInit {
         hasNumber: !errors?.['number'],
         hasSpecialChar: !errors?.['specialChar'],
         hasMinLength: !errors?.['minLength'],
+        containsUsername: !errors?.['containsUsername'],
       };
     });
   }
@@ -98,29 +102,43 @@ export class ResetPasswordModal implements OnInit {
     });
   }
 
-  private passwordValidator(control: AbstractControl): ValidationErrors | null {
-    const value = control.value;
-    if (!value) return null;
+  private passwordValidatorFactory(data: ResetPasswordData): (control: AbstractControl) => ValidationErrors | null {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const value = control.value;
+      if (!value) return null;
 
-    const errors: ValidationErrors = {};
-    if (!/[a-z]/.test(value)) errors['lowerCase'] = true;
-    if (!/[A-Z]/.test(value)) errors['upperCase'] = true;
-    if (!/\d/.test(value)) errors['number'] = true;
-    if (!/[!@#$%^&*(),.?":{}|<>#?!@$%^&*\-.,]/.test(value)) errors['specialChar'] = true;
-    if (value.length < 10) errors['minLength'] = true;
+      const errors: ValidationErrors = {};
+      if (!/[a-z]/.test(value)) errors['lowerCase'] = true;
+      if (!/[A-Z]/.test(value)) errors['upperCase'] = true;
+      if (!/\d/.test(value)) errors['number'] = true;
+      if (!/[!@#$%^&*(),.?":{}|<>#?!@$%^&*\-.,]/.test(value)) errors['specialChar'] = true;
+      if (value.length < 10) errors['minLength'] = true;
 
-    return Object.keys(errors).length ? errors : null;
+      let username = '';
+      if (this.resetPasswordForm?.get('username')?.value) {
+        username = this.resetPasswordForm.get('username')!.value;
+      } else {
+        username = data.username ?? '';
+      }
+
+      if (username && value.toLowerCase().includes(username.toLowerCase())) {
+        errors['containsUsername'] = true;
+      }
+
+      return Object.keys(errors).length ? errors : null;
+    };
   }
 
   private handlePasswordReset(data: any): void {
     this.authService.resetPassword(data.username, data.password).subscribe({
       next: (list) => {
+        this.openSnackBar("Your password was reset successfully.")
         this.dialogRef.close(list);
       },
       error: (err) => {
         console.error(err)
         this.errorMessage = err.message;
-        this.openSnackBar(this.errorMessage ?? "Server Error. Please try again later.")
+        this.openSnackBar(this.errorMessage ?? "Reset Password Failed. Please try again later.")
       }
     });
   }

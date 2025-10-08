@@ -168,7 +168,7 @@ export class AuthService {
       } else if (error.status === 0) {
         errorMessage = 'Cannot connect to server.';
       } else {
-        errorMessage = `Server error (${error.status}): ${error.message}`;
+        errorMessage = `${error.message}`;
       }
     }
     return throwError(() => new Error(errorMessage));

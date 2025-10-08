@@ -75,14 +75,16 @@ fdescribe('ResetPasswordModal', () => {
   it('should mark rules correctly for valid strong password', () => {
     const testName = 'should mark rules correctly for valid strong password';
     try {
+      component.resetPasswordForm.setValue({ username: 'testUsercontain', password: 'ValidPass123!' });
       const passwordControl = component.resetPasswordForm.get('password');
-      passwordControl?.setValue('ValidPass123!');
+      passwordControl?.updateValueAndValidity();
       expect(component.ruleStatus).toEqual({
         hasLowerCase: true,
         hasUpperCase: true,
         hasNumber: true,
         hasSpecialChar: true,
         hasMinLength: true,
+        containsUsername: true,
       });
       logTestResult(testName, component.ruleStatus);
     } catch (err) {
@@ -131,7 +133,8 @@ fdescribe('ResetPasswordModal', () => {
         jasmine.any(String),
         'Close',
         jasmine.any(Object)
-      ); expect(mockDialogRef.close).not.toHaveBeenCalled();
+      );
+      expect(mockDialogRef.close).not.toHaveBeenCalled();
       logTestResult(testName);
     } catch (err) {
       logTestResult(testName, err, false);
@@ -153,19 +156,23 @@ fdescribe('ResetPasswordModal', () => {
 });
 
 fdescribe('ResetPasswordModal.passwordValidator', () => {
-  function makeControl(value: string | null): AbstractControl {
-    return { value } as AbstractControl;
+  function makeControl(value: string | null, username: string = ''): AbstractControl {
+    return {
+      value,
+      root: {
+        get: (name: string) => {
+          if (name === 'username') return { value: username };
+          return { value: '' };
+        }
+      }
+    } as AbstractControl;
   }
 
-  let passCount = 0;
-  let failCount = 0;
-
-  function logResult(testName: string, result: any = null, passed: boolean = true) {
-    const status = passed ? 'PASS' : 'FAIL';
-    console.log(`[${status}] ResetPasswordModal.passwordValidator: ${testName}`, result !== null ? '→ ' + JSON.stringify(result) : '');
-    if (passed) passCount++;
-    else failCount++;
-  }
+  const username = 'testUser';
+  const validatorFn = (ResetPasswordModal as any).prototype.passwordValidatorFactory({
+    username,
+    fromLogin: false
+  });
 
   const tests = [
     { name: 'empty password', value: null, expected: null },
@@ -174,35 +181,19 @@ fdescribe('ResetPasswordModal.passwordValidator', () => {
     { name: 'missing number', value: 'Abcdef!@#', expected: { number: true } },
     { name: 'missing specialChar', value: 'Abcdef123', expected: { specialChar: true } },
     { name: 'too short', value: 'Ab1!short', expected: { minLength: true } },
+    { name: 'contains username (case-insensitive)', value: 'TestUser123!', expected: { containsUsername: true } },
     { name: 'strong password', value: 'ValidPass123!', expected: null }
   ];
 
   tests.forEach(t => {
     it(`should validate ${t.name}`, () => {
-      try {
-        const result = (ResetPasswordModal as any).prototype.passwordValidator(makeControl(t.value));
-
-        if (t.expected === null) {
-          expect(result).toBeNull();
-        } else {
-          expect(result as any).toEqual(jasmine.objectContaining(t.expected as any));
-        }
-
-        logResult(t.name, result, true);
-      } catch (err) {
-        logResult(t.name, err, false);
-        throw err;
+      const control = makeControl(t.value, t.name.includes('username') ? username : '');
+      const result = validatorFn(control);
+      if (t.expected === null) {
+        expect(result).toBeNull();
+      } else {
+        expect(result as any).toEqual(jasmine.objectContaining(t.expected as any));
       }
     });
-  });
-
-  afterAll(() => {
-    const total = passCount + failCount;
-    console.log('----------------------------------------------------');
-    console.log(`[SUMMARY] ResetPasswordModal.passwordValidator`);
-    console.log(`Passed: ${passCount}`);
-    console.log(`Failed: ${failCount}`);
-    console.log(`Total: ${total}`);
-    console.log('----------------------------------------------------');
   });
 });

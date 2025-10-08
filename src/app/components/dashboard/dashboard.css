@@ -1,0 +1,48 @@
+table {
+  width: 100%;
+}
+
+.mat-mdc-table {
+  background-color: #fff;
+  border: none;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+.mat-mdc-paginator {
+    background-color: #fff;
+}
+
+.mat-row {
+  border-bottom-color: var(--custom-border-color) !important;
+}
+
+.enter-container {
+  border: 1px solid #dddddd;
+  margin-top: 1em;
+  padding: 20px 20px 0px 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.enter-animation {
+  animation: slide-fade 1s;
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
