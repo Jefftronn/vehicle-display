@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .custom-dialog {
@@ -48,8 +47,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-weight: 500;
 }
 
-    .error-snackbar-mdc {
-      --mdc-snackbar-container-color: green;
-      --mat-mdc-snack-bar-button-color: white; /* for action button */
-    }
+.error-snackbar-mdc {
+  --mdc-snackbar-container-color: green;
+  --mat-mdc-snack-bar-button-color: white; /* for action button */
+}
     
+div.mat-mdc-select-panel {
+  background-color: white;
+}

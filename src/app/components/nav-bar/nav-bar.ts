@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, viewChild } from '@angular/core';
 import { AuthService, UserProfile, ResetPasswordData } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { ResetPasswordModal } from '../reset-password-modal/reset-password-modal';
 import { MatDialog } from '@angular/material/dialog';
+import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [],
+  imports: [MatMenuModule],
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.css'
 })
 export class NavBar {
   public userProfile: UserProfile | null = null;
+  readonly menuTrigger = viewChild.required(MatMenuTrigger);
 
   constructor(private authService: AuthService, private router: Router, private dialog: MatDialog,
   ) { }

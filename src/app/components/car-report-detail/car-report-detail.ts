@@ -5,19 +5,22 @@ import { map, Observable } from 'rxjs';
 import { Automobile, CarRecord } from '../../models/car-record.model';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { CarReportNotes } from '../car-report-notes/car-report-notes';
-import { ExportServices } from '../../services/export.service';
+import { ExportService } from '../../services/export.service';
 import html2canvas from 'html2canvas';
+import { MatIcon } from '@angular/material/icon';
+import { MatButton } from '@angular/material/button';
+import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 
 declare const initFlowbite: any; // Flowbite exposes this globally when using CDN
 
 @Component({
   selector: 'app-car-report-detail',
-  imports: [CurrencyPipe, CommonModule, CarReportNotes],
+  imports: [CurrencyPipe, CommonModule, CarReportNotes, MatMenuTrigger, MatMenuModule],
   templateUrl: './car-report-detail.html',
   styleUrl: './car-report-detail.css',
 })
 export class CarReportDetail implements OnInit {
-  public carVin?: string;
+  public carVin: string = '';
   public loading$!: Observable<boolean>;
   public error$!: Observable<string | null>;
   public fullReport$!: Observable<CarRecord | undefined>;
@@ -29,7 +32,7 @@ export class CarReportDetail implements OnInit {
   images: string[] = [];
   currentIndex = 0;
 
-  constructor(private route: ActivatedRoute, private carReportService: CarReportService, private exportService: ExportServices) { }
+  constructor(private route: ActivatedRoute, private carReportService: CarReportService, private exportService: ExportService) { }
 
   ngOnInit(): void {
     this.loading$ = this.carReportService.loading$;
@@ -84,6 +87,13 @@ export class CarReportDetail implements OnInit {
     }
   }
 
+  scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
   printPdf() {
     const pages = document.querySelector('.all-pages') as HTMLElement;
     if (pages) {
@@ -92,5 +102,4 @@ export class CarReportDetail implements OnInit {
       console.error("No element found with .all-pages");
     }
   }
-
 }
