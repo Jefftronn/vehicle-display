@@ -87,8 +87,7 @@
                </svg>
             </button>
             <ul id="list-action-dropdown" class="py-2 space-y-2 bg-primary-600 rounded-lg p-3">
-               <li *ngFor="let list of lists$ | async" class="flex flex-row justify-between"
-                  animate.enter="enter-animation" animate.leave="done-csv">
+               <li *ngFor="let list of lists$ | async" class="flex flex-row justify-between">
                   <h3 class="flex items-center p-2 text-white rounded-lg dark:text-white disabled">
                      {{list.name }}
                   </h3>

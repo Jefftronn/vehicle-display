@@ -10,12 +10,13 @@ import html2canvas from 'html2canvas';
 import { MatIcon } from '@angular/material/icon';
 import { MatButton } from '@angular/material/button';
 import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
+import { ExportToast } from "../export-toast/export-toast";
 
 declare const initFlowbite: any; // Flowbite exposes this globally when using CDN
 
 @Component({
   selector: 'app-car-report-detail',
-  imports: [CurrencyPipe, CommonModule, CarReportNotes, MatMenuTrigger, MatMenuModule],
+  imports: [CurrencyPipe, CommonModule, CarReportNotes, MatMenuTrigger, MatMenuModule, ExportToast],
   templateUrl: './car-report-detail.html',
   styleUrl: './car-report-detail.css',
 })
@@ -95,6 +96,8 @@ export class CarReportDetail implements OnInit {
   }
 
   printPdf() {
+    this.exportService.setProcessPDF(true);
+
     const pages = document.querySelector('.all-pages') as HTMLElement;
     if (pages) {
       this.exportService.exportAllToPDF(pages);
