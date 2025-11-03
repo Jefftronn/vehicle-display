@@ -1,71 +1,82 @@
-<div class="all-pages rounded-lg dark:border-gray-700 mt-14">
-
+<div class="all-pages rounded-lg dark:border-gray-700 mt-14 relative" animate.enter="enter-animation">
   <div class="grid mb-4">
     <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5 flex justify-between">
+      <div class="p-4 flex flex-col xl:flex-row gap-8 justify-between">
         <div class="flex gap-8">
           <div class="flex items-center">
             <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
-              <svg class="w-6 h-6 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd"
-                  d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 
-                  1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
-                  clip-rule="evenodd" />
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#1f1f1f">
+                <path
+                  d="M160-240v-200 200ZM80-440l84-240q6-18 21.5-29t34.5-11h183q-3 20-3 40t3 40H234l-42 120h259q17 24 38 44.5t47 35.5H160v200h560v-163q21-3 41-9t39-15v307q0 17-11.5 28.5T760-80h-40q-17 0-28.5-11.5T680-120v-40H200v40q0 17-11.5 28.5T160-80h-40q-17 0-28.5-11.5T80-120v-320Zm540 160q25 0 42.5-17.5T680-340q0-25-17.5-42.5T620-400q-25 0-42.5 17.5T560-340q0 25 17.5 42.5T620-280Zm-360 0q25 0 42.5-17.5T320-340q0-25-17.5-42.5T260-400q-25 0-42.5 17.5T200-340q0 25 17.5 42.5T260-280Zm420-200q-83 0-141.5-58.5T480-680q0-82 58-141t142-59q83 0 141.5 58.5T880-680q0 83-58.5 141.5T680-480Zm-20-160h40v-160h-40v160Zm20 80q8 0 14-6t6-14q0-8-6-14t-14-6q-8 0-14 6t-6 14q0 8 6 14t14 6Z" />
               </svg>
             </div>
             <div>
-              <a>
-                <h3 class="text-lg text-gray-900 dark:text-white">Title Date
-                </h3>
-              </a>
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">2014-10-30
-              </h5>
+              <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Vehicle Detail Report
+              </h3>
             </div>
           </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row space-y-2 md:space-x-3 md:space-y-0 items-stretch md:items-center justify-center xl:justify-end flex-shrink-0">
+          <button type="button" (click)="scrollToSection('car-notes')"
+            class="flex justify-center px-1 py-2.5 text-sm font-medium text-center text-blue-700 bg-white rounded-lg hover:text-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            View Notes
+          </button>
+          <button type="button" (click)="scrollToSection('title-history')"
+            class="flex justify-center px-1 py-2.5 text-sm font-medium text-center text-blue-700 bg-white rounded-lg hover:text-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            View Title History
+          </button>
+          <button type="button"
+            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+            </svg>
+            Save
+          </button>
+
+          <button [matMenuTriggerFor]="menu"
+            class="w-full sm:w-auto flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            <svg class="w-5 h-5 mr-2 text-gray-800 dark:text-white align-middle flex-shrink-0" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 9-7 7-7-7" />
+            </svg>
+            Status
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              Viewed
+            </button>
+            <button mat-menu-item>
+              Taken Action
+            </button>
+            <button mat-menu-item>
+              Archive
+            </button>
+          </mat-menu>
+
+          <button type="button" (click)="printPdf()"
+            class="flex justify-center px-5 py-2.5 text-sm font-medium text-center text-white bg-vistablue-600 rounded-lg hover:bg-vistablue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Export PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="grid mb-4">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4 flex justify-between">
+        <div class="flex flex-wrap gap-8">
           <div class="flex items-center">
             <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
-              <svg class="w-6 h-6 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd"
-                  d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
-                  clip-rule="evenodd" />
-              </svg>
-            </div>
-            <div>
-              <a>
-                <h3 class="text-lg text-gray-900 dark:text-white">Title State
-                </h3>
-              </a>
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">NE
-              </h5>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
-              <svg class="w-6 h-6 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd"
-                  d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
-                  clip-rule="evenodd" />
-              </svg>
-            </div>
-            <div>
-              <a>
-                <h3 class="text-lg text-gray-900 dark:text-white">Odometer
-                </h3>
-              </a>
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">112
-              </h5>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
-              <svg class="w-6 h-6 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd"
-                  d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
-                  clip-rule="evenodd" />
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#1f1f1f">
+                <path
+                  d="M260-320q25 0 42.5-17.5T320-380q0-25-17.5-42.5T260-440q-25 0-42.5 17.5T200-380q0 25 17.5 42.5T260-320Zm360 0q20 0 36-12t21-31q-20-4-38-13.5T606-401l-25-25q-10 8-15.5 20t-5.5 26q0 25 17.5 42.5T620-320Zm-460 40v-200 200Zm40 80v40q0 17-11.5 28.5T160-120h-40q-17 0-28.5-11.5T80-160v-320l84-240q6-18 21.5-29t34.5-11h140v55q0 6 .5 12.5T362-680H234l-42 120h255l80 80H160v200h560v-81q22-2 42.5-11t37.5-25v237q0 17-11.5 28.5T760-120h-40q-17 0-28.5-11.5T680-160v-40H200Zm400-520q17 0 28.5-11.5T640-760q0-17-11.5-28.5T600-800q-17 0-28.5 11.5T560-760q0 17 11.5 28.5T600-720Zm62 262L458-662q-8-8-13-19.5t-5-23.5v-155q0-25 17.5-42.5T500-920h155q12 0 23.5 5t19.5 13l204 204q17 17 17 42.5T902-613L747-458q-17 17-42.5 17T662-458Zm43-70 127-127-185-185H520v127l185 185Zm-29-156Z" />
               </svg>
             </div>
             <div>
@@ -77,165 +88,702 @@
               </h5>
             </div>
           </div>
+          <div class="flex items-center">
+            <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#1f1f1f">
+                <path
+                  d="m240-160 40-160H120l20-80h160l40-160H180l20-80h160l40-160h80l-40 160h160l40-160h80l-40 160h160l-20 80H660l-40 160h160l-20 80H600l-40 160h-80l40-160H360l-40 160h-80Zm140-240h160l40-160H420l-40 160Z" />
+              </svg>
+            </div>
+            <div>
+              <a>
+                <h3 class="text-lg text-gray-900 dark:text-white">License Plate #
+                </h3>
+              </a>
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">HJWEG7
+              </h5>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#1f1f1f">
+                <path
+                  d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q152 0 263.5 98T876-538q-20-10-41.5-15.5T790-560q-19-73-68.5-130T600-776v16q0 33-23.5 56.5T520-680h-80v80q0 17-11.5 28.5T400-560h-80v80h240q11 0 20.5 5.5T595-459q-17 27-26 57t-9 62q0 63 32.5 117T659-122q-41 20-86 31t-93 11Zm-40-82v-78q-33 0-56.5-23.5T360-320v-40L168-552q-3 18-5.5 36t-2.5 36q0 121 79.5 212T440-162Zm340 82q-7 0-12-4t-7-10q-11-35-31-65t-43-59q-21-26-34-57t-13-65q0-58 41-99t99-41q58 0 99 41t41 99q0 34-13.5 64.5T873-218q-23 29-43 59t-31 65q-2 6-7 10t-12 4Zm0-113q10-17 22-31.5t23-29.5q14-19 24.5-40.5T860-340q0-33-23.5-56.5T780-420q-33 0-56.5 23.5T700-340q0 24 10.5 45.5T735-254q12 15 23.5 29.5T780-193Zm0-97q-21 0-35.5-14.5T730-340q0-21 14.5-35.5T780-390q21 0 35.5 14.5T830-340q0 21-14.5 35.5T780-290Z" />
+              </svg>
+            </div>
+            <div>
+              <a>
+                <h3 class="text-lg text-gray-900 dark:text-white">License Plate State
+                </h3>
+              </a>
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">NE
+              </h5>
+            </div>
+          </div>
         </div>
-        <div class="flex sm:gap-4 sm:items-center sm:flex">
-          <a title=""
-            class="text-white mt-4 sm:mt-0 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex items-center justify-center"
-            role="button">
-            <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-              fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
-            </svg>
+      </div>
+    </div>
+  </div> -->
 
-            Title History
-          </a>
+  <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
+    <div class="border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex items-center"
+      style="background-color: #B4ABB2;">
+      <div class="p-4">
+        <div class="flex items-center">
+          <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+              <path
+                d="M260-320q25 0 42.5-17.5T320-380q0-25-17.5-42.5T260-440q-25 0-42.5 17.5T200-380q0 25 17.5 42.5T260-320Zm360 0q20 0 36-12t21-31q-20-4-38-13.5T606-401l-25-25q-10 8-15.5 20t-5.5 26q0 25 17.5 42.5T620-320Zm-460 40v-200 200Zm40 80v40q0 17-11.5 28.5T160-120h-40q-17 0-28.5-11.5T80-160v-320l84-240q6-18 21.5-29t34.5-11h140v55q0 6 .5 12.5T362-680H234l-42 120h255l80 80H160v200h560v-81q22-2 42.5-11t37.5-25v237q0 17-11.5 28.5T760-120h-40q-17 0-28.5-11.5T680-160v-40H200Zm400-520q17 0 28.5-11.5T640-760q0-17-11.5-28.5T600-800q-17 0-28.5 11.5T560-760q0 17 11.5 28.5T600-720Zm62 262L458-662q-8-8-13-19.5t-5-23.5v-155q0-25 17.5-42.5T500-920h155q12 0 23.5 5t19.5 13l204 204q17 17 17 42.5T902-613L747-458q-17 17-42.5 17T662-458Zm43-70 127-127-185-185H520v127l185 185Zm-29-156Z" />
+            </svg>
+          </div>
+          <div>
+            <a>
+              <h3 class="text-lg text-gray-900 dark:text-white">VIN
+              </h3>
+            </a>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">1C4HJWEG7FL555575
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex items-center"
+      style="background-color: #5E555A;">
+      <div class="p-4">
+        <div class="flex items-center">
+          <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+              <path
+                d="m240-160 40-160H120l20-80h160l40-160H180l20-80h160l40-160h80l-40 160h160l40-160h80l-40 160h160l-20 80H660l-40 160h160l-20 80H600l-40 160h-80l40-160H360l-40 160h-80Zm140-240h160l40-160H420l-40 160Z" />
+            </svg>
+          </div>
+          <div>
+            <a>
+              <h3 class="text-lg text-white dark:text-white">License Plate #
+              </h3>
+            </a>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">HJWEG7
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-primary-700 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex items-center">
+      <div class="p-4">
+        <div class="flex items-center">
+          <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+              <path
+                d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q152 0 263.5 98T876-538q-20-10-41.5-15.5T790-560q-19-73-68.5-130T600-776v16q0 33-23.5 56.5T520-680h-80v80q0 17-11.5 28.5T400-560h-80v80h240q11 0 20.5 5.5T595-459q-17 27-26 57t-9 62q0 63 32.5 117T659-122q-41 20-86 31t-93 11Zm-40-82v-78q-33 0-56.5-23.5T360-320v-40L168-552q-3 18-5.5 36t-2.5 36q0 121 79.5 212T440-162Zm340 82q-7 0-12-4t-7-10q-11-35-31-65t-43-59q-21-26-34-57t-13-65q0-58 41-99t99-41q58 0 99 41t41 99q0 34-13.5 64.5T873-218q-23 29-43 59t-31 65q-2 6-7 10t-12 4Zm0-113q10-17 22-31.5t23-29.5q14-19 24.5-40.5T860-340q0-33-23.5-56.5T780-420q-33 0-56.5 23.5T700-340q0 24 10.5 45.5T735-254q12 15 23.5 29.5T780-193Zm0-97q-21 0-35.5-14.5T730-340q0-21 14.5-35.5T780-390q21 0 35.5 14.5T830-340q0 21-14.5 35.5T780-290Z" />
+            </svg>
+          </div>
+          <div>
+            <a>
+              <h3 class="text-lg text-white dark:text-white">License Plate State
+              </h3>
+            </a>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">NE
+            </h5>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="single">
+  <!-- <div class="single mb-4">
     <section *ngIf="carInfo$ | async as car"
-      class="p-6 bg-white dark:bg-gray-900 antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
-      <div class=" mx-auto">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-6 xl:gap-8">
-          <div class="shrink-0 mx-auto">
-            <div class="grid gap-4" *ngIf="images.length > 0">
-              <!-- Main Image -->
-              <div class="relative">
-                <div class="relative h-96 overflow-hidden rounded-lg">
-                  <img *ngFor="let img of images; let i = index" [src]="img"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out"
-                    [class.opacity-100]="currentIndex === i" [class.opacity-0]="currentIndex !== i" />
-                </div>
-
-                <!-- Prev Button -->
-                <button (click)="prev()"
-                  class="absolute left-2 top-0 bottom-0 m-auto h-12 w-12 flex items-center justify-center rounded-full shadow duration-200 ease-in-out bg-white/40 hover:bg-gray-300">
-                  <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="m15 19-7-7 7-7" />
-                  </svg>
-                </button>
-
-                <!-- Next Button -->
-                <button (click)="next()"
-                  class="absolute right-2 top-0 bottom-0 m-auto h-12 w-12 flex items-center justify-center rounded-full shadow duration-200 ease-in-out bg-white/40 hover:bg-gray-300">
-                  <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="m9 5 7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="relative">
-                <!-- Thumbnails -->
-                <button
-                  class="absolute left-2 top-0 bottom-0 m-auto h-8 w-8 flex items-center justify-center transition-colors duration-200 ease-in-out bg-white/40 hover:bg-gray-300 rounded-full p-2 shadow"
-                  (click)="thumbsContainer.scrollBy({ left: -150, behavior: 'smooth' })">
-                  <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="m15 19-7-7 7-7" />
-                  </svg>
-                </button>
-                <div #thumbsContainer class="flex gap-4 overflow-x-auto snap-x snap-mandatory">
-                  <div *ngFor="let img of images; let i = index" (click)="setCurrent(i)"
-                    class="flex-shrink-0 snap-center rounded-lg cursor-pointer focus:ring-2 focus:ring-blue-600 hover:ring-2 hover:ring-gray-300 my-2"
-                    [class.ring-2]="currentIndex === i" [class.ring-blue-600]="currentIndex === i">
-                    <img class="h-32 w-32 object-cover rounded-lg" [src]="img" alt="Thumbnail" />
-                  </div>
-                </div>
-                <button
-                  class="absolute right-2 top-0 bottom-0 m-auto h-8 w-8 flex items-center justify-center transition-colors duration-200 ease-in-out bg-white/40 hover:bg-gray-300 rounded-full p-2 shadow"
-                  (click)="thumbsContainer.scrollBy({ left: 150, behavior: 'smooth' })">
-                  <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="m9 5 7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-          </div>
-
+      class="p-4 bg-white dark:bg-gray-900 antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
+      <div class="mx-auto">
+        <div class="">
           <div class="mt-6 sm:mt-8 lg:mt-0">
-            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
-              {{ car?.year }}
-              {{ car?.make }}
-              {{ car?.model }}
-            </h1>
-            <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{{
-              plate.entities.vehicles.automobiles[0].license_plate }}
+            <h2 class="text-2xl font-bold">
+              Vehicle Information
             </h2>
+            <hr class="my-6 border-gray-200 dark:border-gray-800" />
+            <div class="flex flex-col gap-4">
+              <div class="">
+                <h1 class="text-4xl font-semibold text-primary-700 dark:text-white">
+                  {{ car?.year }}
+                  {{ car?.make }}
+                  {{ car?.model }}
+                </h1>
+                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{{
+                  plate.entities.vehicles.automobiles[0].license_plate }}
+                </h2>
 
-            <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
-              {{ car?.category }}
-            </p>
-            <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
-              <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
-                {{ car?.prices?.msrp | currency}}
-              </p>
-              <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
-                MRSP
-              </p>
-            </div>
-
-            <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
-              <a title=""
-                class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                role="button">
-                <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
-                </svg>
-                Save
-              </a>
-
-              <!-- <a title=""
-                class="text-white mt-4 sm:mt-0 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex items-center justify-center"
-                role="button">
-                <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
-                </svg>
-
-                Add to cart
-              </a> -->
+                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  {{ car?.category }}
+                </p>
+                <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
+                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
+                    {{ car?.prices?.msrp | currency}}
+                  </p>
+                  <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
+                    MRSP
+                  </p>
+                </div>
+              </div>
             </div>
 
             <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
 
-            <p class="mb-6 text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Donec volutpat est eu tincidunt condimentum. Phasellus non quam sed ligula iaculis maximus vel ut
-              dui.
-              Donec vitae ipsum ac leo blandit ultricies eu finibus est
-            </p>
+            <div class="grid grid-cols-2 gap-16 mb-4 border-gray-200">
+              <div>
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  Turbo
+                </p>
 
-            <p class="text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Donec volutpat est eu tincidunt condimentum. Phasellus non quam sed ligula iaculis maximus vel ut
-              dui.
-              Donec vitae ipsum ac leo blandit ultricies eu finibus est
-            </p>
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  TURBO CABRIOLET
+                </p>
+              </div>
+              <div>
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  PLATINUM WHITE PEARL
+                </p>
+
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  SEDAN
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+  </div> -->
+
+  <!-- <div class="single mb-4">
+    <section *ngIf="carInfo$ | async as car"
+      class="p-4 bg-white dark:bg-gray-900 antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
+      <div class="mx-auto">
+        <div class="">
+          <div class="mt-6 sm:mt-8 lg:mt-0">
+            <h2 class="text-2xl font-bold">
+              Vehicle Information
+            </h2>
+            <hr class="my-6 border-gray-200 dark:border-gray-800" />
+            <div class="flex flex-col gap-4">
+              <div class="">
+                <h1 class="text-4xl font-semibold text-primary-700 dark:text-white">
+                  {{ car?.year }}
+                  {{ car?.make }}
+                  {{ car?.model }}
+                </h1>
+                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{{
+                  plate.entities.vehicles.automobiles[0].license_plate }}
+                </h2>
+
+                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  {{ car?.category }}
+                </p>
+                <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
+                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
+                    {{ car?.prices?.msrp | currency}}
+                  </p>
+                  <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
+                    MRSP
+                  </p>
+                </div>
+              </div>
+
+              <div class="">
+                <div class="shrink-0 mx-auto">
+                  <div class="grid gap-4" *ngIf="images.length > 0">
+                    <div class="relative">
+                      <div class="relative h-[30rem] overflow-hidden rounded-lg">
+                        <img *ngFor="let img of images; let i = index" [src]="img"
+                          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out"
+                          [class.opacity-100]="currentIndex === i" [class.opacity-0]="currentIndex !== i" />
+                      </div>
+
+                      <button (click)="prev()"
+                        class="absolute left-2 top-0 bottom-0 m-auto h-12 w-12 flex items-center justify-center rounded-full shadow duration-200 ease-in-out bg-white/40 hover:bg-gray-300">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m15 19-7-7 7-7" />
+                        </svg>
+                      </button>
+
+                      <button (click)="next()"
+                        class="absolute right-2 top-0 bottom-0 m-auto h-12 w-12 flex items-center justify-center rounded-full shadow duration-200 ease-in-out bg-white/40 hover:bg-gray-300">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m9 5 7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="relative">
+                      <button
+                        class="absolute left-2 top-0 bottom-0 m-auto h-8 w-8 flex items-center justify-center transition-colors duration-200 ease-in-out bg-white/40 hover:bg-gray-300 rounded-full p-2 shadow"
+                        (click)="thumbsContainer.scrollBy({ left: -150, behavior: 'smooth' })">
+                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m15 19-7-7 7-7" />
+                        </svg>
+                      </button>
+                      <div #thumbsContainer class="flex gap-4 overflow-x-auto snap-x snap-mandatory">
+                        <div *ngFor="let img of images; let i = index" (click)="setCurrent(i)"
+                          class="flex-shrink-0 snap-center rounded-lg cursor-pointer focus:ring-2 focus:ring-blue-600 hover:ring-2 hover:ring-gray-300 my-2"
+                          [class.ring-2]="currentIndex === i" [class.ring-blue-600]="currentIndex === i">
+                          <img class="h-32 w-32 object-cover rounded-lg" [src]="img" alt="Thumbnail" />
+                        </div>
+                      </div>
+                      <button
+                        class="absolute right-2 top-0 bottom-0 m-auto h-8 w-8 flex items-center justify-center transition-colors duration-200 ease-in-out bg-white/40 hover:bg-gray-300 rounded-full p-2 shadow"
+                        (click)="thumbsContainer.scrollBy({ left: 150, behavior: 'smooth' })">
+                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m9 5 7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
+
+            <div class="grid grid-cols-2 gap-16 mb-4 border-gray-200">
+              <div>
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  Turbo
+                </p>
+
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  TURBO CABRIOLET
+                </p>
+              </div>
+              <div>
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  PLATINUM WHITE PEARL
+                </p>
+
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  SEDAN
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> -->
+
+  <!-- <div class="single mb-4">
+    <section *ngIf="carInfo$ | async as car"
+      class="p-4 bg-white dark:bg-gray-900 antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
+      <div class="mx-auto">
+        <div class="">
+          <div class="mt-6 sm:mt-8 lg:mt-0">
+            <h2 class="text-2xl font-bold">
+              Vehicle Information
+            </h2>
+            <hr class="my-6 border-gray-200 dark:border-gray-800" />
+            <div class="flex flex-col gap-4 mb-8">
+              <div class="">
+                <h1 class="text-4xl font-semibold text-primary-700 dark:text-white">
+                  {{ car?.year }}
+                  {{ car?.make }}
+                  {{ car?.model }}
+                </h1>
+                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{{
+                  plate.entities.vehicles.automobiles[0].license_plate }}
+                </h2>
+
+                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  {{ car?.category }}
+                </p>
+                <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
+                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
+                    {{ car?.prices?.msrp | currency}}
+                  </p>
+                  <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
+                    MRSP
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 mb-4 border-gray-200">
+              <div>
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  Turbo
+                </p>
+
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  TURBO CABRIOLET
+                </p>
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  PLATINUM WHITE PEARL
+                </p>
+
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+                </h5>
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                  SEDAN
+                </p>
+              </div>
+              <div class="">
+                <div class="shrink-0 mx-auto">
+                  <div class="grid gap-4" *ngIf="images.length > 0">
+                    <div class="relative">
+                      <div class="relative h-[30rem] overflow-hidden rounded-lg">
+                        <img *ngFor="let img of images; let i = index" [src]="img"
+                          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out"
+                          [class.opacity-100]="currentIndex === i" [class.opacity-0]="currentIndex !== i" />
+                      </div>
+
+                      <button (click)="prev()"
+                        class="absolute left-2 top-0 bottom-0 m-auto h-12 w-12 flex items-center justify-center rounded-full shadow duration-200 ease-in-out bg-white/40 hover:bg-gray-300">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m15 19-7-7 7-7" />
+                        </svg>
+                      </button>
+
+                      <button (click)="next()"
+                        class="absolute right-2 top-0 bottom-0 m-auto h-12 w-12 flex items-center justify-center rounded-full shadow duration-200 ease-in-out bg-white/40 hover:bg-gray-300">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m9 5 7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="relative">
+                      <button
+                        class="absolute left-2 top-0 bottom-0 m-auto h-8 w-8 flex items-center justify-center transition-colors duration-200 ease-in-out bg-white/40 hover:bg-gray-300 rounded-full p-2 shadow"
+                        (click)="thumbsContainer.scrollBy({ left: -150, behavior: 'smooth' })">
+                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m15 19-7-7 7-7" />
+                        </svg>
+                      </button>
+                      <div #thumbsContainer class="flex gap-4 overflow-x-auto snap-x snap-mandatory">
+                        <div *ngFor="let img of images; let i = index" (click)="setCurrent(i)"
+                          class="flex-shrink-0 snap-center rounded-lg cursor-pointer focus:ring-2 focus:ring-blue-600 hover:ring-2 hover:ring-gray-300 my-2"
+                          [class.ring-2]="currentIndex === i" [class.ring-blue-600]="currentIndex === i">
+                          <img class="h-32 w-32 object-cover rounded-lg" [src]="img" alt="Thumbnail" />
+                        </div>
+                      </div>
+                      <button
+                        class="absolute right-2 top-0 bottom-0 m-auto h-8 w-8 flex items-center justify-center transition-colors duration-200 ease-in-out bg-white/40 hover:bg-gray-300 rounded-full p-2 shadow"
+                        (click)="thumbsContainer.scrollBy({ left: 150, behavior: 'smooth' })">
+                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m9 5 7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> -->
+
+  <!-- <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 mb-4">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4">
+        <a>
+          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Vehicle Information
+          </h5>
+        </a>
+        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Vehicle
+        </h5>
+        <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">2025 Acura TLX A-Spec.</p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Price
+        </h5>
+        <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">$123,000</p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          Turbo
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          TURBO CABRIOLET
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          PLATINUM WHITE PEARL
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          SEDAN
+        </p>
+      </div>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4">
+        <div class="shrink-0 mx-auto">
+          <div class="grid gap-4" *ngIf="images.length > 0">
+            <div class="relative">
+              <div class="relative h-[30rem] overflow-hidden rounded-lg">
+                <img *ngFor="let img of images; let i = index" [src]="img"
+                  class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out"
+                  [class.opacity-100]="currentIndex === i" [class.opacity-0]="currentIndex !== i" />
+              </div>
+
+              <button (click)="prev()"
+                class="absolute left-2 top-0 bottom-0 m-auto h-12 w-12 flex items-center justify-center rounded-full shadow duration-200 ease-in-out bg-white/40 hover:bg-gray-300">
+                <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m15 19-7-7 7-7" />
+                </svg>
+              </button>
+
+              <button (click)="next()"
+                class="absolute right-2 top-0 bottom-0 m-auto h-12 w-12 flex items-center justify-center rounded-full shadow duration-200 ease-in-out bg-white/40 hover:bg-gray-300">
+                <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m9 5 7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="relative">
+              <button
+                class="absolute left-2 top-0 bottom-0 m-auto h-8 w-8 flex items-center justify-center transition-colors duration-200 ease-in-out bg-white/40 hover:bg-gray-300 rounded-full p-2 shadow"
+                (click)="thumbsContainer.scrollBy({ left: -150, behavior: 'smooth' })">
+                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m15 19-7-7 7-7" />
+                </svg>
+              </button>
+              <div #thumbsContainer class="flex gap-4 overflow-x-auto snap-x snap-mandatory">
+                <div *ngFor="let img of images; let i = index" (click)="setCurrent(i)"
+                  class="flex-shrink-0 snap-center rounded-lg cursor-pointer focus:ring-2 focus:ring-blue-600 hover:ring-2 hover:ring-gray-300 my-2"
+                  [class.ring-2]="currentIndex === i" [class.ring-blue-600]="currentIndex === i">
+                  <img class="h-32 w-32 object-cover rounded-lg" [src]="img" alt="Thumbnail" />
+                </div>
+              </div>
+              <button
+                class="absolute right-2 top-0 bottom-0 m-auto h-8 w-8 flex items-center justify-center transition-colors duration-200 ease-in-out bg-white/40 hover:bg-gray-300 rounded-full p-2 shadow"
+                (click)="thumbsContainer.scrollBy({ left: 150, behavior: 'smooth' })">
+                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m9 5 7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4">
+        <a>
+          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Vehicle Information
+          </h5>
+        </a>
+        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Vehicle
+        </h5>
+        <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">2025 Acura TLX A-Spec.</p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Price
+        </h5>
+        <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">$123,000</p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          Turbo
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          TURBO CABRIOLET
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          PLATINUM WHITE PEARL
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          SEDAN
+        </p>
+      </div>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4">
+        <a>
+          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Insurance Policy Holder
+            Details
+          </h5>
+        </a>
+        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Name
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          John Doe
+        </p>
+
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Drivers License #
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          D1233FG5
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">DOB
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          01/12/78
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Garage Address
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          92 Miles Drive, Newark, NJ 07103, California, United States of America
+        </p>
+
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Mailing Address
+        </h5>
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          92 Miles Drive, Newark, NJ 07103, California, United States of America
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="title-history" class="grid mb-4">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4">
+        <a>
+          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">NMVTIS Title History
+          </h5>
+        </a>
+        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+        <div *ngFor="let item of [].constructor(3)">
+          <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-6">
+            <div class="flex">
+              <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#1f1f1f">
+                  <path
+                    d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q152 0 263.5 98T876-538q-20-10-41.5-15.5T790-560q-19-73-68.5-130T600-776v16q0 33-23.5 56.5T520-680h-80v80q0 17-11.5 28.5T400-560h-80v80h240q11 0 20.5 5.5T595-459q-17 27-26 57t-9 62q0 63 32.5 117T659-122q-41 20-86 31t-93 11Zm-40-82v-78q-33 0-56.5-23.5T360-320v-40L168-552q-3 18-5.5 36t-2.5 36q0 121 79.5 212T440-162Zm340 82q-7 0-12-4t-7-10q-11-35-31-65t-43-59q-21-26-34-57t-13-65q0-58 41-99t99-41q58 0 99 41t41 99q0 34-13.5 64.5T873-218q-23 29-43 59t-31 65q-2 6-7 10t-12 4Zm0-113q10-17 22-31.5t23-29.5q14-19 24.5-40.5T860-340q0-33-23.5-56.5T780-420q-33 0-56.5 23.5T700-340q0 24 10.5 45.5T735-254q12 15 23.5 29.5T780-193Zm0-97q-21 0-35.5-14.5T730-340q0-21 14.5-35.5T780-390q21 0 35.5 14.5T830-340q0 21-14.5 35.5T780-290Z" />
+                </svg>
+              </div>
+              <div>
+                <a>
+                  <h3 class="text-lg text-gray-900 dark:text-white">State
+                  </h3>
+                </a>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">MT
+                </h5>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
+                <svg class="w-6 h-6 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <a>
+                  <h3 class="text-lg text-gray-900 dark:text-white">Date
+                  </h3>
+                </a>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">08/24/2025
+                </h5>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#1f1f1f">
+                  <path
+                    d="M260-320q25 0 42.5-17.5T320-380q0-25-17.5-42.5T260-440q-25 0-42.5 17.5T200-380q0 25 17.5 42.5T260-320Zm360 0q20 0 36-12t21-31q-20-4-38-13.5T606-401l-25-25q-10 8-15.5 20t-5.5 26q0 25 17.5 42.5T620-320Zm-460 40v-200 200Zm40 80v40q0 17-11.5 28.5T160-120h-40q-17 0-28.5-11.5T80-160v-320l84-240q6-18 21.5-29t34.5-11h140v55q0 6 .5 12.5T362-680H234l-42 120h255l80 80H160v200h560v-81q22-2 42.5-11t37.5-25v237q0 17-11.5 28.5T760-120h-40q-17 0-28.5-11.5T680-160v-40H200Zm400-520q17 0 28.5-11.5T640-760q0-17-11.5-28.5T600-800q-17 0-28.5 11.5T560-760q0 17 11.5 28.5T600-720Zm62 262L458-662q-8-8-13-19.5t-5-23.5v-155q0-25 17.5-42.5T500-920h155q12 0 23.5 5t19.5 13l204 204q17 17 17 42.5T902-613L747-458q-17 17-42.5 17T662-458Zm43-70 127-127-185-185H520v127l185 185Zm-29-156Z" />
+                </svg>
+              </div>
+              <div>
+                <a>
+                  <h3 class="text-lg text-gray-900 dark:text-white">VIN
+                  </h3>
+                </a>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">1C4HJWEG7FL555575
+                </h5>
+              </div>
+            </div>
+          </div>
+          <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+        </div>
+      </div>
+    </div>
   </div>
 
 
-
-  <div class="grid grid-cols-4 gap-4 mb-4">
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
+  <!-- <div class="grid grid-cols-4 gap-4 mb-4">
+    <div class="bg-red-500 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4">
         <a>
           <h3 class="text-lg text-gray-900 dark:text-white">Title Date
           </h3>
@@ -244,8 +792,8 @@
         </h5>
       </div>
     </div>
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
+    <div class="bg-blue-500 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4">
         <a>
           <h3 class="text-lg text-gray-900 dark:text-white">Title State
           </h3>
@@ -254,8 +802,8 @@
         </h5>
       </div>
     </div>
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
+    <div class="bg-green-500 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4">
         <a>
           <h3 class="text-lg text-gray-900 dark:text-white">Odometer
           </h3>
@@ -265,7 +813,7 @@
       </div>
     </div>
     <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
+      <div class="p-4">
         <a>
           <h3 class="text-lg text-gray-900 dark:text-white">VIN
           </h3>
@@ -274,70 +822,11 @@
         </h5>
       </div>
     </div>
-  </div>
+  </div> -->
 
-
-  <div class="grid grid-cols-3 gap-4 mb-4">
+  <!-- <div class="grid mb-4">
     <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
-        <a>
-          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Insurance Policy Details
-          </h5>
-        </a>
-        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
-
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Donec volutpat est eu tincidunt condimentum. Phasellus non quam sed ligula iaculis maximus vel ut dui.
-          Donec vitae ipsum ac leo blandit ultricies eu finibus est.</p>
-      </div>
-    </div>
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
-        <a>
-          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Vehicle Garage Details
-          </h5>
-        </a>
-        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
-
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Donec volutpat est eu tincidunt condimentum. Phasellus non quam sed ligula iaculis maximus vel ut dui.
-          Donec vitae ipsum ac leo blandit ultricies eu finibus est</p>
-      </div>
-    </div>
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
-        <a>
-          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Policy Holder Details
-          </h5>
-        </a>
-        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
-
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Donec volutpat est eu tincidunt condimentum. Phasellus non quam sed ligula iaculis maximus vel ut dui.
-          Donec vitae ipsum ac leo blandit ultricies eu finibus est</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid mb-4">
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
-        <a>
-          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Title History
-          </h5>
-        </a>
-        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
-
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Donec volutpat est eu tincidunt condimentum. Phasellus non quam sed ligula iaculis maximus vel ut dui.
-          Donec vitae ipsum ac leo blandit ultricies eu finibus est.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid mb-4">
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-      <div class="p-5">
+      <div class="p-4">
         <a>
           <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sales History
           </h5>
@@ -349,35 +838,17 @@
           Donec vitae ipsum ac leo blandit ultricies eu finibus est</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="single">
-    <app-car-report-notes></app-car-report-notes>
+    <app-car-report-notes id="car-notes" [carVin]="carVin"></app-car-report-notes>
   </div>
+  <app-export-toast></app-export-toast>
 </div>
 
 <div data-dial-init class="fixed end-6 bottom-6 group">
   <div id="speed-dial-menu-text-outside-button" class="flex flex-col items-center hidden mb-4 space-y-2">
-    <button type="button"
-      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200 hover:text-gray-900 dark:border-gray-600 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
-      <svg class="w-5 h-5 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-        viewBox="0 0 18 18">
-        <path
-          d="M14.419 10.581a3.564 3.564 0 0 0-2.574 1.1l-4.756-2.49a3.54 3.54 0 0 0 .072-.71 3.55 3.55 0 0 0-.043-.428L11.67 6.1a3.56 3.56 0 1 0-.831-2.265c.006.143.02.286.043.428L6.33 6.218a3.573 3.573 0 1 0-.175 4.743l4.756 2.491a3.58 3.58 0 1 0 3.508-2.871Z" />
-      </svg>
-      <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-14 top-1/2">Share</span>
-    </button>
     <button type="button" (click)="printPdf()"
-      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
-      <svg class="w-5 h-5 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-        viewBox="0 0 20 20">
-        <path d="M5 20h10a1 1 0 0 0 1-1v-5H4v5a1 1 0 0 0 1 1Z" />
-        <path
-          d="M18 7H2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2v-3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Zm-1-2V2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3h14Z" />
-      </svg>
-      <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-14 top-1/2">Print</span>
-    </button>
-    <button type="button"
       class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
       <svg class="w-5 h-5 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
         viewBox="0 0 20 20">
@@ -386,7 +857,7 @@
         <path
           d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
       </svg>
-      <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-14 top-1/2">Save</span>
+      <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-20 top-1/2 ">Export PDF</span>
     </button>
     <button type="button"
       class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
@@ -397,12 +868,23 @@
         <path
           d="M11.066 4H7v5a2 2 0 0 1-2 2H0v7a1.969 1.969 0 0 0 1.933 2h9.133A1.97 1.97 0 0 0 13 18V6a1.97 1.97 0 0 0-1.934-2Z" />
       </svg>
-      <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-14 top-1/2">Copy</span>
+      <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-20 top-1/2">Copy URL</span>
+    </button>
+    <button type="button"
+      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+      <svg class="w-5 h-5 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+        viewBox="0 0 18 20">
+        <path
+          d="M5 9V4.13a2.96 2.96 0 0 0-1.293.749L.879 7.707A2.96 2.96 0 0 0 .13 9H5Zm11.066-9H9.829a2.98 2.98 0 0 0-2.122.879L7 1.584A.987.987 0 0 0 6.766 2h4.3A3.972 3.972 0 0 1 15 6v10h1.066A1.97 1.97 0 0 0 18 14V2a1.97 1.97 0 0 0-1.934-2Z" />
+        <path
+          d="M11.066 4H7v5a2 2 0 0 1-2 2H0v7a1.969 1.969 0 0 0 1.933 2h9.133A1.97 1.97 0 0 0 13 18V6a1.97 1.97 0 0 0-1.934-2Z" />
+      </svg>
+      <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-20 top-1/2">Archive</span>
     </button>
   </div>
   <button type="button" data-dial-toggle="speed-dial-menu-text-outside-button"
     aria-controls="speed-dial-menu-text-outside-button" aria-expanded="false"
-    class="flex items-center justify-center text-white bg-blue-700 rounded-lg w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    class="flex items-center justify-center text-white bg-vistablue-600 rounded-lg w-14 h-14 hover:bg-vistablue-700 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
     <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />

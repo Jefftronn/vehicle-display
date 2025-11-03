@@ -1,0 +1,59 @@
+div[animate] {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.enter-animation {
+  animation: slide-fade 3s;
+  background-color: #7F033E;
+}
+
+@keyframes slide-fade {
+  from {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+    border-radius: 50%;
+  }
+  to {
+    width: 3000px;
+    height: 3000px;
+    opacity: 1;
+    border-radius: 50%;
+  }
+}
+
+@keyframes grow-shrink-circle {
+  0% {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #7F033E;
+    opacity: 1;
+  }
+  50% {
+    width: 3000px;
+    height: 3000px;
+    border-radius: 50%;
+    background-color: #7F033E;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 0;
+  }
+}
+
+.circle-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #7F033E;
+  animation: grow-shrink-circle 1.2s ease-in-out forwards;
+}

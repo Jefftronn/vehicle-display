@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit, inject, signal, ChangeDetectorRef } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from "@angular/router";
@@ -6,6 +6,7 @@ import { AuthService, ResetPasswordData } from '../../services/auth.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ResetPasswordModal } from '../reset-password-modal/reset-password-modal';
 import { CommonModule } from '@angular/common';
+import { animate, style } from '@angular/animations';
 
 @Component({
   selector: 'app-login-page',
@@ -17,6 +18,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './login-page.css'
 })
 export class LoginPage implements OnInit {
+  showOverlay = false;
   public errorMessage?: string;
   public loading: boolean = false;
   public backgroundImage = '/assets/images/pexels-pixabay-164634.jpg';
@@ -26,9 +28,25 @@ export class LoginPage implements OnInit {
     password: ['', [Validators.required]],
   })
 
-  constructor(private authService: AuthService, private router: Router, private snackbar: MatSnackBar, private dialog: MatDialog) { }
+  circleGrow = animate('700ms ease-out', style({
+    width: '3000px',
+    height: '3000px',
+    borderRadius: '50%',
+    backgroundColor: '#3B82F6',
+    opacity: 1
+  }));
 
-  public ngOnInit(): void {
+  circleShrink = animate('500ms ease-in', style({
+    width: '0px',
+    height: '0px',
+    borderRadius: '50%',
+    backgroundColor: '#ffffff',
+    opacity: 0
+  }));
+
+  constructor(private authService: AuthService, private router: Router, private snackbar: MatSnackBar, private dialog: MatDialog, private cd: ChangeDetectorRef) { }
+
+  ngOnInit(): void {
   }
 
   public onSubmit() {
@@ -62,13 +80,20 @@ export class LoginPage implements OnInit {
     });
   }
 
+  enterClass = signal('enter-animation');
+
   private handleLogin(data: any): void {
     this.loading = true;
     this.authService.login(data.username, data.password).subscribe({
       next: (data) => {
+        this.showOverlay = true;
+        this.cd.detectChanges();
         this.loading = false;
         this.errorMessage = undefined;
-        this.router.navigate(['/dashboard'])
+        setTimeout(() => {
+          this.showOverlay = false;
+          this.router.navigate(['/dashboard'])
+        }, 600);
       },
       error: (err) => {
         this.loading = false;

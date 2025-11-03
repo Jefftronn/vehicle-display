@@ -1,0 +1,73 @@
+<div>
+  <div *ngIf="processCSV$ | async" class="grid mb-4 absolute right-4 top-4" style="z-index: 9999;"
+    animate.enter="create-csv" animate.leave="done-csv">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4 flex justify-between">
+        <div class="flex gap-8">
+          <div class="flex items-center w-80">
+            <img src="images/copy.gif" class="w-8 h-8 mr-4" alt="Loading..." />
+            <div>
+              <p class="text-gray-600 text-base font-medium dark:text-white">
+                Preparing CSV File...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="completeCSV$ | async" class="grid mb-4 absolute right-4 top-4" style="z-index: 9999;"
+    animate.enter="create-csv" animate.leave="done-csv">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4 flex justify-between">
+        <div class="flex gap-8">
+          <div class="flex items-center w-80">
+            <img src="images/download.gif" class="w-8 h-8 mr-4" alt="Loading..." />
+            <div>
+              <p class="text-gray-600 text-base font-medium dark:text-white">
+                Downloading CSV File...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="processPDF$ | async" class="grid mb-4 absolute right-4 top-4" style="z-index: 9999;"
+    animate.enter="create-csv" animate.leave="done-csv">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4 flex justify-between">
+        <div class="flex gap-8">
+          <div class="flex items-center w-80">
+            <img src="images/copy.gif" class="w-8 h-8 mr-4" alt="Loading..." />
+            <div>
+              <p class="text-gray-600 text-base font-medium dark:text-white">
+                Preparing PDF File...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="completePDF$ | async" class="grid mb-4 absolute right-4 top-4" style="z-index: 9999;"
+    animate.enter="create-csv" animate.leave="done-csv">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-4 flex justify-between">
+        <div class="flex gap-8">
+          <div class="flex items-center w-80">
+            <img src="images/download.gif" class="w-8 h-8 mr-4" alt="Loading..." />
+            <div>
+              <p class="text-gray-600 text-base font-medium dark:text-white">
+                Downloading PDF File...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
