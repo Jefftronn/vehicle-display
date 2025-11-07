@@ -1,0 +1,1180 @@
+[
+  {
+  "vehicleInformation": {
+    "vin": "ZFF74UFA5D0193635",
+    "licensePlate": "FEZZA",
+    "licensePlateState": "MT",
+    "make": "FERRARI",
+    "model": "F12BERLINETTA",
+    "year": "2013",
+    "bodyStyle": "COUPE",
+    "color": null,
+    "trim": "BASE",
+    "series": "-",
+    "garagedAddress": "565 E 16TH AVE",
+    "garagedCity": "SALT LAKE CITY",
+    "garagedState": "UT",
+    "garagedZip": "84103",
+    "mailingAddress": "565 E 16TH AVE",
+    "mailingCity": "SALT LAKE CITY",
+    "mailingState": "UT",
+    "mailingZip": "84103",
+    "msrp": 315888
+  },
+  "policyInformation": {
+    "companyName": "AMERICAN MODERN PROPERTY & CASUALTY INSURANCE COMPANY",
+    "policyNumber": "103157421",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "11/2/2024",
+    "policyExpirationDate": "11/2/2025",
+    "policyFirstReportedDate": "11/20/2022",
+    "policyLastReportedDate": "10/20/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "MARGO BECKER",
+      "driverLicenseNumber": "154413175",
+      "dob": "7/17/1977"
+    },
+    {
+      "fullName": "RAMSAY CHU",
+      "driverLicenseNumber": "197489933",
+      "dob": "11/30/1967"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "7/11/2024",
+      "titleState": "FL"
+    },
+    {
+      "titleDate": "11/3/2021",
+      "titleState": "FL"
+    },
+    {
+      "titleDate": "5/21/2013",
+      "titleState": "NY"
+    },
+    {
+      "titleDate": "8/15/2024",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "1/17/2020",
+      "titleState": "NY"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "ZHWUG7ZFXRLA26334",
+    "licensePlate": "EJR851",
+    "licensePlateState": "MT",
+    "make": "LAMBORGHINI",
+    "model": "HURACN",
+    "year": "2024",
+    "bodyStyle": "COUPE",
+    "color": "GRIGIO LYNX",
+    "trim": "STERRATO",
+    "series": "STERRATO",
+    "garagedAddress": "6274 W GRANT CIR",
+    "garagedCity": "HIGHLAND",
+    "garagedState": "UT",
+    "garagedZip": "840035519",
+    "mailingAddress": "6274 W GRANT CIR",
+    "mailingCity": "HIGHLAND",
+    "mailingState": "UT",
+    "mailingZip": "840035519",
+    "msrp": 293634
+  },
+  "policyInformation": {
+    "companyName": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY",
+    "policyNumber": "0352777SFP44001",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "10/9/2025",
+    "policyExpirationDate": "4/9/2026",
+    "policyFirstReportedDate": "10/18/2025",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "JORDAN BINNING",
+      "driverLicenseNumber": "214114381",
+      "dob": "1/25/1986"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "9/9/2024",
+      "titleState": "MT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "WP0AG2A94PS252101",
+    "licensePlate": "DXV836",
+    "licensePlateState": "MT",
+    "make": "PORSCHE",
+    "model": "911",
+    "year": "2023",
+    "bodyStyle": "COUPE",
+    "color": null,
+    "trim": "SPORT CLASSIC II",
+    "series": "TYPE 992",
+    "garagedAddress": "5651 COVENTRY L",
+    "garagedCity": "FORT WAYNE",
+    "garagedState": "IN",
+    "garagedZip": "46804",
+    "mailingAddress": "5651 COVENTRY L",
+    "mailingCity": "FORT WAYNE",
+    "mailingState": "IN",
+    "mailingZip": "46804",
+    "msrp": 272300
+  },
+  "policyInformation": {
+    "companyName": "PRIVILEGE UNDERWRITERS RECIPROCAL EXCHANGE",
+    "policyNumber": "PA2560863",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "6/1/2025",
+    "policyExpirationDate": "6/1/2026",
+    "policyFirstReportedDate": "6/7/2025",
+    "policyLastReportedDate": "10/20/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "THOMAS SCHREIBER",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "MIKE BERMES",
+      "driverLicenseNumber": null,
+      "dob": null
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "6/21/2023",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "2/9/2023",
+      "titleState": "UT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "ZHWUF4ZF1LLA13867",
+    "licensePlate": "737778E",
+    "licensePlateState": "MT",
+    "make": "LAMBORGHINI",
+    "model": "HURACAN",
+    "year": "2020",
+    "bodyStyle": "COUPE",
+    "color": "GRIGIO LYNX (DARK GREY)",
+    "trim": "EVO",
+    "series": "EVO COUPE",
+    "garagedAddress": "2986 CASTLE DR",
+    "garagedCity": "WASHINGTON",
+    "garagedState": "UT",
+    "garagedZip": "847808121",
+    "mailingAddress": "2986 CASTLE DR",
+    "mailingCity": "WASHINGTON",
+    "mailingState": "UT",
+    "mailingZip": "847808121",
+    "msrp": 261274
+  },
+  "policyInformation": {
+    "companyName": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY",
+    "policyNumber": "198562844",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "7/18/2025",
+    "policyExpirationDate": "1/18/2026",
+    "policyFirstReportedDate": "3/5/2024",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "TRACIE BOURGOIN",
+      "driverLicenseNumber": "159237605",
+      "dob": "8/25/1979"
+    },
+    {
+      "fullName": "KYLE BOURGOIN",
+      "driverLicenseNumber": "159066795",
+      "dob": "6/27/1979"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "3/14/2022",
+      "titleState": "NV"
+    },
+    {
+      "titleDate": "9/23/2021",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "2/19/2020",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "5/10/2023",
+      "titleState": "NV"
+    },
+    {
+      "titleDate": "2/21/2020",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "4/16/2024",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "5/3/2022",
+      "titleState": "NV"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "SCFRMHCV6PGT03272",
+    "licensePlate": "794567D",
+    "licensePlateState": "MT",
+    "make": "ASTON MARTIN",
+    "model": "DBS",
+    "year": "2023",
+    "bodyStyle": "CONVERTIBLE",
+    "color": "LUNAR WHITE",
+    "trim": "BASE",
+    "series": "5.2 VOLANTE V12",
+    "garagedAddress": "2975 EXREC PKWY STE 196",
+    "garagedCity": "LEHI",
+    "garagedState": "UT",
+    "garagedZip": "840434724",
+    "mailingAddress": "PO BOX 404",
+    "mailingCity": "SPRINGVILLE",
+    "mailingState": "UT",
+    "mailingZip": "846630404",
+    "msrp": 257128
+  },
+  "policyInformation": {
+    "companyName": "OWNERS INSURANCE COMPANY",
+    "policyNumber": "4921424100",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "7/10/2025",
+    "policyExpirationDate": "7/10/2026",
+    "policyFirstReportedDate": "5/17/2015",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "LESLIE BASTIAN",
+      "driverLicenseNumber": "147805654",
+      "dob": "1/16/1969"
+    },
+    {
+      "fullName": "SID BASTIAN",
+      "driverLicenseNumber": "149865228",
+      "dob": "6/4/1966"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "3/8/2023",
+      "titleState": "MT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "ZHWUC1ZF5FLA01247",
+    "licensePlate": "739223D",
+    "licensePlateState": "MT",
+    "make": "LAMBORGHINI",
+    "model": "HURACAN",
+    "year": "2015",
+    "bodyStyle": "COUPE",
+    "color": "GRIGIO LYNX (DARK GREY) - METALLIC COLOR",
+    "trim": "BASE",
+    "series": "LP 610-4",
+    "garagedAddress": "2655 W 15090 S",
+    "garagedCity": "RIVERTON",
+    "garagedState": "UT",
+    "garagedZip": "840655075",
+    "mailingAddress": "2655 W 15090 S",
+    "mailingCity": "RIVERTON",
+    "mailingState": "UT",
+    "mailingZip": "840655075",
+    "msrp": 237250
+  },
+  "policyInformation": {
+    "companyName": "MID CENTURY INSURANCE COMPANY",
+    "policyNumber": "190408207",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "5/6/2019",
+    "policyExpirationDate": "11/6/2025",
+    "policyFirstReportedDate": "5/17/2019",
+    "policyLastReportedDate": "10/20/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "BRIAN BONHAM",
+      "driverLicenseNumber": "13345590",
+      "dob": "1/8/1964"
+    },
+    {
+      "fullName": "JENNIFER BONHAM",
+      "driverLicenseNumber": "149265834",
+      "dob": "5/7/1971"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "2/8/2017",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "9/14/2021",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "8/26/2020",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "12/10/2021",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "2/2/2015",
+      "titleState": "CA"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "ZPBUA1ZL8NLA19802",
+    "licensePlate": "EUM068",
+    "licensePlateState": "MT",
+    "make": "LAMBORGHINI",
+    "model": "URUS",
+    "year": "2022",
+    "bodyStyle": "SUV",
+    "color": "NERO NOCTIS",
+    "trim": "BASE",
+    "series": "4.0 V8",
+    "garagedAddress": "1651 E BOX ELDER CIR",
+    "garagedCity": "ALPINE",
+    "garagedState": "UT",
+    "garagedZip": "840041812",
+    "mailingAddress": "1651 E BOX ELDER CIR",
+    "mailingCity": "ALPINE",
+    "mailingState": "UT",
+    "mailingZip": "840041812",
+    "msrp": 221506
+  },
+  "policyInformation": {
+    "companyName": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY",
+    "policyNumber": "184945344A",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "6/1/2025",
+    "policyExpirationDate": "12/1/2025",
+    "policyFirstReportedDate": "4/2/2025",
+    "policyLastReportedDate": "8/4/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "TRAVIS BOTT",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "AVERY BOTT",
+      "driverLicenseNumber": "234231199",
+      "dob": "4/3/2006"
+    },
+    {
+      "fullName": "CASSANDRA BOTT",
+      "driverLicenseNumber": "176401364",
+      "dob": "9/2/1991"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "11/28/2022",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "7/5/2022",
+      "titleState": "FL"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "WP0CD2A9XMS263732",
+    "licensePlate": "DRX104",
+    "licensePlateState": "MT",
+    "make": "PORSCHE",
+    "model": "911",
+    "year": "2021",
+    "bodyStyle": "CONVERTIBLE",
+    "color": null,
+    "trim": "TURBO S",
+    "series": "TURBO S CABRIOLET",
+    "garagedAddress": "275 LOWER EVERGREEN DR",
+    "garagedCity": "PARK CITY",
+    "garagedState": "UT",
+    "garagedZip": "840985254",
+    "mailingAddress": "275 LOWER EVERGREEN DR",
+    "mailingCity": "PARK CITY",
+    "mailingState": "UT",
+    "mailingZip": "840985254",
+    "msrp": 216300
+  },
+  "policyInformation": {
+    "companyName": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY",
+    "policyNumber": "206821144",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "9/10/2025",
+    "policyExpirationDate": "3/10/2026",
+    "policyFirstReportedDate": "9/18/2024",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "JANET BIRNKRANT",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "JONATHAN BIRNKRANT",
+      "driverLicenseNumber": "235627775",
+      "dob": "6/24/1970"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "9/9/2022",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "5/27/2021",
+      "titleState": "AZ"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "SBM13GAA6HW001424",
+    "licensePlate": "EAY329",
+    "licensePlateState": "MT",
+    "make": "MCLAREN",
+    "model": "570GT",
+    "year": "2017",
+    "bodyStyle": "COUPE",
+    "color": "ELITE VERMILLION RED",
+    "trim": "BASE",
+    "series": "-",
+    "garagedAddress": "3195 E BLUE QUARTZ DR",
+    "garagedCity": "ST GEORGE",
+    "garagedState": "UT",
+    "garagedZip": "84790",
+    "mailingAddress": "3195 E BLUE QUARTZ DR",
+    "mailingCity": "ST GEORGE",
+    "mailingState": "UT",
+    "mailingZip": "84790",
+    "msrp": 198950
+  },
+  "policyInformation": {
+    "companyName": "ACUITY, A MUTUAL INSURANCE COMPANY (P)",
+    "policyNumber": "VF9026",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "8/28/2023",
+    "policyExpirationDate": "2/19/2026",
+    "policyFirstReportedDate": "3/2/2020",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "KARL DURST",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "LUKE DURST",
+      "driverLicenseNumber": "230525339",
+      "dob": "3/4/2003"
+    },
+    {
+      "fullName": "MELISSA DURST",
+      "driverLicenseNumber": "164606665",
+      "dob": "4/12/1983"
+    },
+    {
+      "fullName": "TY DURST",
+      "driverLicenseNumber": "232771113",
+      "dob": "10/4/2005"
+    },
+    {
+      "fullName": "BROOKLYN ANDERSON",
+      "driverLicenseNumber": "232621094",
+      "dob": "6/22/2005"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "11/14/2019",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "9/27/2021",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "10/10/2019",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "9/10/2021",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "2/23/2022",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "12/23/2021",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "1/13/2021",
+      "titleState": "CA"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "ZFF65LJA6B0181162",
+    "licensePlate": "714609E",
+    "licensePlateState": "MT",
+    "make": "FERRARI",
+    "model": "CALIFORNIA",
+    "year": "2011",
+    "bodyStyle": "CONVERTIBLE",
+    "color": null,
+    "trim": "BASE",
+    "series": "-",
+    "garagedAddress": "3220 MILLCREEK RD",
+    "garagedCity": "PLEASANT GRV",
+    "garagedState": "UT",
+    "garagedZip": "840628813",
+    "mailingAddress": "3220 MILLCREEK RD",
+    "mailingCity": "PLEASANT GRV",
+    "mailingState": "UT",
+    "mailingZip": "840628813",
+    "msrp": 192000
+  },
+  "policyInformation": {
+    "companyName": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY",
+    "policyNumber": "192493644A",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "7/21/2025",
+    "policyExpirationDate": "1/21/2026",
+    "policyFirstReportedDate": "2/5/2024",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "LEE ADAMS",
+      "driverLicenseNumber": "152183677",
+      "dob": "5/27/1975"
+    },
+    {
+      "fullName": "HENRY ADAMS",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "BRIAN ADAMS",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "JUDE ADAMS",
+      "driverLicenseNumber": null,
+      "dob": null
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "7/27/2023",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "5/9/2013",
+      "titleState": "AZ"
+    },
+    {
+      "titleDate": "5/18/2023",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "11/2/2021",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "7/31/2013",
+      "titleState": "FL"
+    },
+    {
+      "titleDate": "6/24/2015",
+      "titleState": "OR"
+    },
+    {
+      "titleDate": "7/31/2011",
+      "titleState": "CA"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "SCFSMGFW6SGN09815",
+    "licensePlate": "ENG756",
+    "licensePlateState": "MT",
+    "make": "ASTON MARTIN",
+    "model": "VANTAGE",
+    "year": "2025",
+    "bodyStyle": "COUPE",
+    "color": "LUNAR WHITE",
+    "trim": "BASE",
+    "series": "4.0 V8 AUTO",
+    "garagedAddress": "11303 N STONEY BROOK CT",
+    "garagedCity": "HIGHLAND",
+    "garagedState": "UT",
+    "garagedZip": "840034803",
+    "mailingAddress": "11303 N STONEY BROOK CT",
+    "mailingCity": "HIGHLAND",
+    "mailingState": "UT",
+    "mailingZip": "840034803",
+    "msrp": 191000
+  },
+  "policyInformation": {
+    "companyName": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY",
+    "policyNumber": "214476444",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "10/4/2025",
+    "policyExpirationDate": "4/4/2026",
+    "policyFirstReportedDate": "4/17/2025",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "JEFFREY BELL",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "RACHELLE BELL",
+      "driverLicenseNumber": "191982941",
+      "dob": "6/30/1961"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "6/5/2025",
+      "titleState": "MT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "WUASUAFG6F7000725",
+    "licensePlate": "IAQD",
+    "licensePlateState": "OR",
+    "make": "AUDI",
+    "model": "R8",
+    "year": "2015",
+    "bodyStyle": "CONVERTIBLE",
+    "color": "TEAK BROWN METALLIC",
+    "trim": "BASE",
+    "series": "4.2 FSI SPYDER QUATTRO S TRONIC",
+    "garagedAddress": "1703 W GRAFTON RD",
+    "garagedCity": "ROCKVILLE",
+    "garagedState": "UT",
+    "garagedZip": "84763",
+    "mailingAddress": "1703 W GRAFTON RD PO BOX 153",
+    "mailingCity": "ROCKVILLE",
+    "mailingState": "UT",
+    "mailingZip": "84763",
+    "msrp": 190600
+  },
+  "policyInformation": {
+    "companyName": "AMERICAN FAMILY INSURANCE COMPANY",
+    "policyNumber": "410694767181",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "8/9/2025",
+    "policyExpirationDate": "2/9/2026",
+    "policyFirstReportedDate": "8/21/2021",
+    "policyLastReportedDate": "10/20/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "AMBER BLEADON",
+      "driverLicenseNumber": null,
+      "dob": null
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "2/24/2015",
+      "titleState": "TX"
+    },
+    {
+      "titleDate": "6/10/2019",
+      "titleState": "OR"
+    },
+    {
+      "titleDate": "2/8/2019",
+      "titleState": "UT"
+    },
+    {
+      "titleDate": "11/28/2018",
+      "titleState": "UT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "WP0BB2A98PS233893",
+    "licensePlate": "CCFP9736",
+    "licensePlateState": "MT",
+    "make": "PORSCHE",
+    "model": "911",
+    "year": "2023",
+    "bodyStyle": "COUPE",
+    "color": null,
+    "trim": "TARGA 4S / 4 GTS / EDITION 50 YEAR PORSCHE DESIGN",
+    "series": "TYPE 992",
+    "garagedAddress": "2145 BEAR HOLLOW DR",
+    "garagedCity": "PARK CITY",
+    "garagedState": "UT",
+    "garagedZip": "84098",
+    "mailingAddress": "4250 NE 22ND AVE",
+    "mailingCity": "FT LAUDERDALE",
+    "mailingState": "FL",
+    "mailingZip": "333085628",
+    "msrp": 186200
+  },
+  "policyInformation": {
+    "companyName": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY",
+    "policyNumber": "162749944E",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "9/5/2025",
+    "policyExpirationDate": "3/5/2026",
+    "policyFirstReportedDate": "3/19/2024",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "JOHN BIAGI",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "SHELLY BIAGI",
+      "driverLicenseNumber": null,
+      "dob": null
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "8/29/2023",
+      "titleState": "MT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "W1NYC7HJ6PX487554",
+    "licensePlate": "0AY177",
+    "licensePlateState": "UT",
+    "make": "MERCEDES-BENZ",
+    "model": "G-CLASS",
+    "year": "2023",
+    "bodyStyle": "SUV",
+    "color": "MANUFAKTUR CHINA BLUE NON-METALLIC",
+    "trim": "AMG G63",
+    "series": "AMG G 63",
+    "garagedAddress": "2825 E CRAIG DR",
+    "garagedCity": "SALT LAKE CITY",
+    "garagedState": "UT",
+    "garagedZip": "84109",
+    "mailingAddress": "2825 E CRAIG DR",
+    "mailingCity": "SALT LAKE CITY",
+    "mailingState": "UT",
+    "mailingZip": "84109",
+    "msrp": 179000
+  },
+  "policyInformation": {
+    "companyName": "PROGRESSIVE CLASSIC INSURANCE COMPANY",
+    "policyNumber": "999013051",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "6/18/2025",
+    "policyExpirationDate": "12/18/2025",
+    "policyFirstReportedDate": "6/18/2025",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "DAN BENZION",
+      "driverLicenseNumber": "221097843",
+      "dob": "2/18/1986"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "10/12/2023",
+      "titleState": "OR"
+    },
+    {
+      "titleDate": "9/11/2025",
+      "titleState": "UT"
+    },
+    {
+      "titleDate": "9/5/2025",
+      "titleState": "UT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "W1NYC7HJ0PX473584",
+    "licensePlate": "744PCG",
+    "licensePlateState": "OR",
+    "make": "MERCEDES-BENZ",
+    "model": "G-CLASS",
+    "year": "2023",
+    "bodyStyle": "SUV",
+    "color": null,
+    "trim": "AMG G63",
+    "series": "AMG G 63",
+    "garagedAddress": "274 S 600 E",
+    "garagedCity": "ALPINE",
+    "garagedState": "UT",
+    "garagedZip": "840041798",
+    "mailingAddress": "274 S 600 E",
+    "mailingCity": "ALPINE",
+    "mailingState": "UT",
+    "mailingZip": "840041798",
+    "msrp": 179000
+  },
+  "policyInformation": {
+    "companyName": "THE CINCINNATI CASUALTY COMPANY",
+    "policyNumber": "A011180787",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "1/1/2025",
+    "policyExpirationDate": "1/1/2026",
+    "policyFirstReportedDate": "1/8/2024",
+    "policyLastReportedDate": "10/20/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "I ADAMS",
+      "driverLicenseNumber": "159799699",
+      "dob": "3/3/1955"
+    },
+    {
+      "fullName": "DAVID ADAMS",
+      "driverLicenseNumber": "12867078",
+      "dob": "12/22/1953"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "8/7/2023",
+      "titleState": "OR"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "WP0BB2A98RS233279",
+    "licensePlate": "742620E",
+    "licensePlateState": "MT",
+    "make": "PORSCHE",
+    "model": "911",
+    "year": "2024",
+    "bodyStyle": "COUPE",
+    "color": null,
+    "trim": "TARGA 4S, TARGA 4 GTS, EDITION 50 YEAR PORSCHE DESIGN",
+    "series": "TYPE 992",
+    "garagedAddress": "7148 S CITY VIEW DRIVE",
+    "garagedCity": "SALT LAKE CITY",
+    "garagedState": "UT",
+    "garagedZip": "84121",
+    "mailingAddress": "7148 S CITY VIEW DRIVE",
+    "mailingCity": "SALT LAKE CITY",
+    "mailingState": "UT",
+    "mailingZip": "84121",
+    "msrp": 171000
+  },
+  "policyInformation": {
+    "companyName": "MIDWEST FAMILY INSURANCE COMPANY",
+    "policyNumber": "PPUT0560137550",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "1/4/2025",
+    "policyExpirationDate": "1/4/2026",
+    "policyFirstReportedDate": "1/17/2024",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "ACE ALLAK",
+      "driverLicenseNumber": "172541625",
+      "dob": ""
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "1/17/2024",
+      "titleState": "UT"
+    },
+    {
+      "titleDate": "4/22/2024",
+      "titleState": "MT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "WP0BB2A90NS232508",
+    "licensePlate": "783203E",
+    "licensePlateState": "MT",
+    "make": "PORSCHE",
+    "model": "911",
+    "year": "2022",
+    "bodyStyle": "TARGA",
+    "color": "CHALK",
+    "trim": "GTS",
+    "series": "TARGA 4 GTS",
+    "garagedAddress": "2411 E WALKER LN",
+    "garagedCity": "HOLLADAY",
+    "garagedState": "UT",
+    "garagedZip": "841177717",
+    "mailingAddress": "2411 E WALKER LN",
+    "mailingCity": "HOLLADAY",
+    "mailingState": "UT",
+    "mailingZip": "841177717",
+    "msrp": 156800
+  },
+  "policyInformation": {
+    "companyName": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY",
+    "policyNumber": "197987144C",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "7/8/2025",
+    "policyExpirationDate": "1/8/2026",
+    "policyFirstReportedDate": "8/4/2025",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "TERI ANDRUS",
+      "driverLicenseNumber": "8644866",
+      "dob": "11/10/1961"
+    },
+    {
+      "fullName": "BRAD ANDRUS",
+      "driverLicenseNumber": "146105409",
+      "dob": "10/28/1960"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "12/5/2024",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "11/29/2022",
+      "titleState": "NC"
+    },
+    {
+      "titleDate": "9/18/2024",
+      "titleState": "CA"
+    },
+    {
+      "titleDate": "7/11/2024",
+      "titleState": "CA"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "WP0BB2A90NS232315",
+    "licensePlate": "DXV904",
+    "licensePlateState": "MT",
+    "make": "PORSCHE",
+    "model": "911",
+    "year": "2022",
+    "bodyStyle": "COUPE",
+    "color": null,
+    "trim": "TARGA 4S / 4 GTS",
+    "series": "TYPE 992",
+    "garagedAddress": "5651 COVENTRY L",
+    "garagedCity": "FORT WAYNE",
+    "garagedState": "IN",
+    "garagedZip": "46804",
+    "mailingAddress": "5651 COVENTRY L",
+    "mailingCity": "FORT WAYNE",
+    "mailingState": "IN",
+    "mailingZip": "46804",
+    "msrp": 156800
+  },
+  "policyInformation": {
+    "companyName": "PRIVILEGE UNDERWRITERS RECIPROCAL EXCHANGE",
+    "policyNumber": "PA2560863",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "6/1/2025",
+    "policyExpirationDate": "6/1/2026",
+    "policyFirstReportedDate": "6/7/2025",
+    "policyLastReportedDate": "10/20/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "THOMAS SCHREIBER",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "MIKE BERMES",
+      "driverLicenseNumber": null,
+      "dob": null
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "3/15/2023",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "10/31/2022",
+      "titleState": "UT"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "W1NYC7HJ3MX418364",
+    "licensePlate": "795754D",
+    "licensePlateState": "MT",
+    "make": "MERCEDES-BENZ",
+    "model": "G-CLASS",
+    "year": "2021",
+    "bodyStyle": "SUV",
+    "color": "BLACK",
+    "trim": "AMG G63",
+    "series": "AMG G63",
+    "garagedAddress": "13106 S RIVERBENDVIEW COVE",
+    "garagedCity": "RIVERTON",
+    "garagedState": "UT",
+    "garagedZip": "84065",
+    "mailingAddress": "13106 S RIVERBENDVIEW COVE",
+    "mailingCity": "RIVERTON",
+    "mailingState": "UT",
+    "mailingZip": "84065",
+    "msrp": 156450
+  },
+  "policyInformation": {
+    "companyName": "UNITED FINANCIAL CASUALTY COMPANY",
+    "policyNumber": "972968336",
+    "policyType": "COMMERCIAL",
+    "policyEffectiveDate": "9/11/2025",
+    "policyExpirationDate": "9/11/2026",
+    "policyFirstReportedDate": "9/21/2023",
+    "policyLastReportedDate": "10/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "MJ ALOHA LLC",
+      "driverLicenseNumber": null,
+      "dob": null
+    },
+    {
+      "fullName": "MARK AUGASON",
+      "driverLicenseNumber": "151289420",
+      "dob": "2/16/1974"
+    },
+    {
+      "fullName": "JENNIFER AUGASON",
+      "driverLicenseNumber": "162002556",
+      "dob": "4/19/1978"
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "3/27/2023",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "1/6/2022",
+      "titleState": "IL"
+    }
+  ]
+},
+{
+  "vehicleInformation": {
+    "vin": "WP0AF2A77JL141044",
+    "licensePlate": "ENG495",
+    "licensePlateState": "MT",
+    "make": "PORSCHE",
+    "model": "PANAMERA",
+    "year": "2018",
+    "bodyStyle": "HATCHBACK",
+    "color": "VOLCANO GREY METALLIC",
+    "trim": "TURBO",
+    "series": "TURBO",
+    "garagedAddress": "702 S ALPINE HIGHWAY",
+    "garagedCity": "ALPINE",
+    "garagedState": "UT",
+    "garagedZip": "84004",
+    "mailingAddress": "702 S ALPINE HIGHWAY",
+    "mailingCity": "ALPINE",
+    "mailingState": "UT",
+    "mailingZip": "84004",
+    "msrp": 150000
+  },
+  "policyInformation": {
+    "companyName": "FARM BUREAU PROPERTY & CASUALTY INSURANCE COMPANY (P)",
+    "policyNumber": "0000000008410470",
+    "policyType": "PERSONAL",
+    "policyEffectiveDate": "7/14/2025",
+    "policyExpirationDate": "7/14/2026",
+    "policyFirstReportedDate": "8/4/2025",
+    "policyLastReportedDate": "8/18/2025"
+  },
+  "holderInformation": [
+    {
+      "fullName": "MARK AMACHER",
+      "driverLicenseNumber": null,
+      "dob": null
+    }
+  ],
+  "titleInformation": [
+    {
+      "titleDate": "11/11/2023",
+      "titleState": "FL"
+    },
+    {
+      "titleDate": "10/7/2024",
+      "titleState": "MT"
+    },
+    {
+      "titleDate": "4/23/2018",
+      "titleState": "CT"
+    }
+  ]
+}
+]

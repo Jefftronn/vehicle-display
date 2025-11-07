@@ -8,8 +8,14 @@
       "^/api-bumper": ""
     }
   },
-    "/api": {
+    "/api/auth": {
     "target": "https://utapi-ir.insure-rite.com/utauthapi",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+    "/api/ncvehicle": {
+    "target": "https://utapi-ir.insure-rite.com/uttcapi",
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug"

@@ -70,33 +70,33 @@ export class Dashboard implements OnInit, AfterViewInit {
   // Table
   public dataSource = new MatTableDataSource<CarReport>();
   public displayedColumns: string[] = [
+    'batch',
     'vin',
-    'licensePlateState',
-    'year',
+    'household',
     'make',
     'model',
+    'year',
     'msrp',
-    'status',
     'actions'
   ];
 
   // Filters
   public filterForm!: FormGroup;
-  public yearMin = 2015;
-  public yearMax = 2025;
-  public priceMin = 25000;
-  public priceMax = 150000;
+  public yearMin = 1975;
+  public yearMax = 2026;
+  public priceMin = 5000;
+  public priceMax = 350000;
 
-  public yearOptions: Options = { floor: 2015, ceil: 2025, step: 1 };
+  public yearOptions: Options = { floor: 1975, ceil: 2026, step: 1 };
   public priceOptions: Options = {
-    floor: 25000,
-    ceil: 150000,
+    floor: 5000,
+    ceil: 350000,
     step: 1000,
     translate: (value: number) => `$${value.toLocaleString()}`
   };
 
   public usStates: string[] = [];
-  public yearsOptions: number[] = [];
+  public batchOptions: number[] = [];
 
   // UI
   public isPanelExpanded = false;
@@ -133,8 +133,8 @@ export class Dashboard implements OnInit, AfterViewInit {
       vin: [''],
       make: [''],
       model: [''],
-      licensePlateState: [''],
-      yearRegistered: ['']
+      household: [''],
+      batch: ['']
     });
 
     this.dataSource.filterPredicate = this.createFilter();
@@ -188,14 +188,12 @@ export class Dashboard implements OnInit, AfterViewInit {
 
   public applyFilter(): void {
     this.loading = true;
-    console.log("set")
     setTimeout(() => {
       this.dataSource.filter = JSON.stringify({
         ...this.filterForm.value,
         yearRange: [this.yearMin, this.yearMax],
         priceRange: [this.priceMin, this.priceMax]
       });
-      console.log("remove")
       this.loading = false;
     }, 600);
   }
@@ -205,10 +203,10 @@ export class Dashboard implements OnInit, AfterViewInit {
   }
 
   public resetFilters(): void {
-    this.yearMin = 2015;
-    this.yearMax = 2025;
-    this.priceMin = 25000;
-    this.priceMax = 150000;
+    this.yearMin = 1975;
+    this.yearMax = 2026;
+    this.priceMin = 5000;
+    this.priceMax = 350000;
     this.filterForm.reset();
     this.applyFilter();
     this.isShown.update((isShown) => !isShown);
@@ -218,8 +216,8 @@ export class Dashboard implements OnInit, AfterViewInit {
     console.log('Editing', car);
   }
 
-  viewCarDetails(vin: string): void {
-    this.router.navigate(['/car', vin]);
+  viewCarDetails(id: number): void {
+    this.router.navigate(['/vehicle', id.toString()]);
   }
 
   openArchiveDialog(): void {
@@ -237,7 +235,7 @@ export class Dashboard implements OnInit, AfterViewInit {
 
     const pages = document.querySelector('.all-pages') as HTMLElement;
     if (pages) {
-      this.exportService.exportAllToPDF(pages);
+      this.exportService.exportAllToPDF(pages, 'dashboard', '');
     } else {
       console.error("No element found with .all-pages");
     }
@@ -256,17 +254,18 @@ export class Dashboard implements OnInit, AfterViewInit {
         (!f.vin || data.vin?.toLowerCase().includes(f.vin.toLowerCase())) &&
         (!f.make || data.make.toLowerCase().includes(f.make.toLowerCase())) &&
         (!f.model || data.model.toLowerCase().includes(f.model.toLowerCase())) &&
+        (!f.household || data.household.toLowerCase().includes(f.household.toLowerCase())) &&
         (data.year >= f.yearRange[0] && data.year <= f.yearRange[1]) &&
         (data.msrp >= f.priceRange[0] && data.msrp <= f.priceRange[1]) &&
-        (!f.licensePlateState || data.licensePlateState === f.licensePlateState) &&
-        (!f.yearRegistered || data.yearRegistered === f.yearRegistered)
+        // (!f.licensePlateState || data.licensePlateState === f.licensePlateState) &&
+        (!f.batch || data.batch === f.batch)
       );
     };
   }
 
   private updateFilterOptions(): void {
     const cars = this.dataSource.data;
-    this.usStates = Array.from(new Set(cars.map(c => c.licensePlateState)));
-    this.yearsOptions = Array.from(new Set(cars.map(c => c.yearRegistered)));
+    // this.usStates = Array.from(new Set(cars.map(c => c.licensePlateState)));
+    this.batchOptions = Array.from(new Set(cars.map(c => c.batch)));
   }
 }

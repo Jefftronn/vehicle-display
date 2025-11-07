@@ -31,10 +31,10 @@ export const routes: Routes = [
 
       },
       {
-        path: 'car/:vin',
+        path: 'vehicle/:id',
         component: CarReportDetail,
         canActivate: [AuthGuard],
-        title: 'Car Report'
+        title: 'Vehicle Report'
       },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]

@@ -7,7 +7,7 @@ export interface Note {
   content: string;
   createdAt?: Date;
   createdBy?: string;
-  carVin: string;
+  carId: string;
 }
 
 @Injectable({
@@ -37,21 +37,21 @@ export class NoteService {
           content: "Very straight-to-point article. Really worth time reading. Thank you! But tools are just the instruments for the UX designers. The knowledge of the design tools are as important as the creation of the design strategy.",
           createdBy: "jgarcia",
           createdAt: new Date("2024-08-01T10:00:00Z"),
-          carVin: "1C4HJWEGXY1YPF9Y"
+          carId: "234"
         },
         {
           id: 2,
           content: "The article covers the essentials, challenges, myths and stages the UX designer should consider while creating the design strategy.",
           createdBy: "cjones",
           createdAt: new Date("2024-08-15T14:30:00Z"),
-          carVin: "1C4HJWEGXY1YPF9Y"
+          carId: "245"
         },
         {
           id: 3,
           content: "Thanks for sharing this. I do came from the Backend development and explored some of the tools to design my Side Projects.",
           createdBy: "chess",
           createdAt: new Date("2024-09-05T08:45:00Z"),
-          carVin: "1C4HJWEGXY1YPF9Y"
+          carId: "12"
         },
       ]
       setTimeout(() => {
@@ -74,7 +74,7 @@ export class NoteService {
       content: data.content,
       createdBy: data.username,
       createdAt: new Date(),
-      carVin: '',
+      carId: '',
     };
 
     return of(data).pipe(

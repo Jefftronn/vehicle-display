@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { BehaviorSubject, Observable, throwError, switchMap } from "rxjs";
+import { BehaviorSubject, Observable, throwError, switchMap, of, delay } from "rxjs";
 import { tap, catchError } from "rxjs";
 import { environment } from "../../environments/environment";
 
@@ -59,7 +59,43 @@ export class AuthService {
     }
   }
 
-  public login(username: string, password: string): Observable<any> {
+  public login(username: string, password: string, useDummy = true): Observable<any> {
+
+    // --- Dummy data mode ---
+    const fakeResponse = {
+      jwtToken: 'dummy-jwt-token',
+      jwtTokenExpiresAt: 3600, // 1 hour
+      username,
+      userID: 999,
+      userRole: 'tester'
+    };
+
+    if (useDummy) {
+      return of(fakeResponse).pipe(
+        delay(500), // Simulate network delay
+        tap(response => {
+          // Reuse your existing login logic
+          localStorage.setItem(this.tokenKey, response.jwtToken);
+
+          const profile: UserProfile = {
+            username: response.username,
+            userID: response.userID,
+            userRole: response.userRole
+          };
+          localStorage.setItem(this.profileKey, JSON.stringify(profile));
+
+          this.profileSubject.next(profile);
+          this.authStatus.next(true);
+
+          const expiryTimestamp = Date.now() + response.jwtTokenExpiresAt * 1000;
+          localStorage.setItem(this.expiresKey, expiryTimestamp.toString());
+
+          const expiresInMs = expiryTimestamp - Date.now();
+          this.scheduleAutoLogout(expiresInMs);
+        })
+      );
+    }
+
     return this.getIPAddress().pipe(
       switchMap(res => {
         const loginRequest: LoginRequest = {

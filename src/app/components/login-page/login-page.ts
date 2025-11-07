@@ -88,9 +88,9 @@ export class LoginPage implements OnInit {
       next: (data) => {
         this.showOverlay = true;
         this.cd.detectChanges();
-        this.loading = false;
-        this.errorMessage = undefined;
         setTimeout(() => {
+          this.loading = false;
+          this.errorMessage = undefined;
           this.showOverlay = false;
           this.router.navigate(['/dashboard'])
         }, 600);
@@ -99,7 +99,6 @@ export class LoginPage implements OnInit {
         this.loading = false;
         this.errorMessage = err.message;
         this.loginForm.reset();
-        console.log(this.errorMessage, err);
         // this.carData = undefined;
         this.openSnackBar(this.errorMessage ?? "Login failed. Please try again later.")
       }

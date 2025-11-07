@@ -9,6 +9,7 @@ import { CreateListModal } from '../create-list-modal/create-list-modal';
 import { MatDialog } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIcon } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { DeleteListModal } from '../delete-list-modal/delete-list-modal';
 import { EditListModal } from '../edit-list-modal/edit-list-modal';
 @Component({
@@ -29,7 +30,7 @@ export class SideBar implements OnInit {
     description: ['', [Validators.required]],
   })
 
-  constructor(private router: Router, private listService: ListService, private dialog: MatDialog) { }
+  constructor(private router: Router, private listService: ListService, private dialog: MatDialog, private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.lists$ = this.listService.lists$;
@@ -59,6 +60,8 @@ export class SideBar implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
+        this.openSnackBar("Your list has been created successfully.")
+
       }
     });
   }
@@ -89,4 +92,13 @@ export class SideBar implements OnInit {
       }
     });
   }
+
+  public openSnackBar(message: string, action: string = 'Close') {
+    this.snackbar.open(message, 'Close', {
+      duration: 4000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      panelClass: ['error-snackbar']
+    });
+  };
 }

@@ -16,7 +16,7 @@ import { AuthService, UserProfile } from '../../services/auth.service';
   styleUrl: './car-report-notes.css'
 })
 export class CarReportNotes implements OnInit {
-  @Input() carVin = '';
+  @Input() carId = '';
   public lists$!: Observable<Note[]>;
   public noteListLoading$!: Observable<boolean>;
   public errorNoteList$!: Observable<string | null>;
@@ -37,7 +37,6 @@ export class CarReportNotes implements OnInit {
     this.authService.getProfile().subscribe({
       next: (profile) => {
         this.userProfile = profile;
-        console.log(profile);
       }
     })
 
@@ -53,7 +52,7 @@ export class CarReportNotes implements OnInit {
         content: noteContent.content,
         createdBy: this.userProfile?.username,
         createdAt: new Date(),
-        carVin: this.carVin,
+        carId: this.carId,
       }
 
       this.noteService.createNote(noteRequest).subscribe({

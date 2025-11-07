@@ -465,3 +465,53 @@ export interface ReportInfo {
   report_id: string;
   response_time: number;
 }
+
+export interface VehicleDetail {
+  vehicleInformation: VehicleInformation;
+  policyInformation: PolicyInformation;
+  holderInformation: HolderInformation[];
+  titleInformation: TitleInformation[];
+}
+
+export interface VehicleInformation {
+  vin: string,
+  licensePlate: string,
+  licensePlateState: string,
+  make: string,
+  model: string,
+  year: string,
+  bodyStyle: string,
+  color: string,
+  trim: string,
+  series: string,
+  garagedAddress: string,
+  garagedCity: string,
+  garagedState: string,
+  garagedZip: string,
+  mailingAddress: string,
+  mailingCity: string,
+  mailingState: string,
+  mailingZip: string,
+  msrp: number,
+}
+
+export interface PolicyInformation {
+  companyName: string,
+  policyNumber: string,
+  policyType: string,
+  policyEffectiveDate: string,
+  policyExpirationDate: string,
+  policyFirstReportedDate: string,
+  policyLastReportedDate: string
+}
+
+export interface HolderInformation {
+  fullName: string,
+  driverLicenseNumber: string,
+  dob: string
+}
+
+export interface TitleInformation {
+  titleDate: string,
+  titleState: string
+}
