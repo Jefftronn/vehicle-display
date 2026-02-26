@@ -36,7 +36,15 @@ export class CarReportDetail implements OnInit {
   public carPlate$!: Observable<CarRecord | undefined>;
   @ViewChild('thumbsContainer', { static: false }) thumbsContainer!: ElementRef<HTMLDivElement>;
 
-  images: string[] = [];
+  images: string[] = [
+  'https://images.unsplash.com/photo-1503376780353-7e6692767b70',
+  'https://images.unsplash.com/photo-1511919884226-fd3cad34687c',
+  'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d',
+  'https://images.unsplash.com/photo-1493238792000-8113da705763',
+  'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023',
+  'https://images.unsplash.com/photo-1502877338535-766e1452684a',
+  'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf'
+];
   currentIndex = 0;
 
   constructor(private route: ActivatedRoute, private carReportService: CarReportService, private exportService: ExportService) {

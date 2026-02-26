@@ -18,7 +18,7 @@ export class CarReportService {
   public loading$ = this.loadingSubject.asObservable();
   private errorSubject = new BehaviorSubject<string | null>(null);
   public error$ = this.errorSubject.asObservable();
-  private baseUrl = 'https://api.bumper.com/sandbox/v1/vehicle/full'; // <-- your API endpoint
+  private baseUrl = '';
   private apiKey = '';
   private baseProxyUrl = '/api-bumper/sandbox/v1/vehicle/full';
   private baseNCVehicleProxyUrl = '/api/ncvehicle/summary';
@@ -31,7 +31,7 @@ export class CarReportService {
     const url = `${this.baseProxyUrl}?vin=${vin}`;
 
     const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.apiKey}`,        // sending key as header
+      'Authorization': `Bearer ${this.apiKey}`,
       'Content-Type': 'application/json'
     });
 
@@ -51,8 +51,8 @@ export class CarReportService {
       const dummyLists: CarReport[] = [
         {
           "id": 5993,
-          "vin": "ZFF74UFA5D0193635",
-          "household": "BECKER | 565 E 16TH AVE",
+          "vin": "JTHBP5C2XA5034892",
+          "household": "JOHNSON | 1234 MAPLE ST",
           "make": "FERRARI",
           "model": "F12BERLINETTA",
           "year": "2013",
@@ -61,8 +61,8 @@ export class CarReportService {
         },
         {
           "id": 5574,
-          "vin": "ZHWUG7ZFXRLA26334",
-          "household": "BINNING | 6274 W GRANT CIR",
+          "vin": "WVWZZZ3CZ9E123456",
+          "household": "MARTINEZ | 5678 OAK AVE",
           "make": "LAMBORGHINI",
           "model": "HURACN",
           "year": "2024",
@@ -71,8 +71,8 @@ export class CarReportService {
         },
         {
           "id": 2294,
-          "vin": "WP0AG2A94PS252101",
-          "household": "BERMES | 5651 COVENTRY L",
+          "vin": "1G1YY22G965112345",
+          "household": "SMITH | 9012 PINE RD",
           "make": "PORSCHE",
           "model": "911",
           "year": "2023",
@@ -81,8 +81,8 @@ export class CarReportService {
         },
         {
           "id": 2284,
-          "vin": "ZHWUF4ZF1LLA13867",
-          "household": "BOURGOIN | 2986 CASTLE DR",
+          "vin": "2HGCV51667H512345",
+          "household": "WILLIAMS | 3456 ELM DR",
           "make": "LAMBORGHINI",
           "model": "HURACAN",
           "year": "2020",
@@ -91,8 +91,8 @@ export class CarReportService {
         },
         {
           "id": 8076,
-          "vin": "SCFRMHCV6PGT03272",
-          "household": "BASTIAN | 2975 EXREC PKWY STE 196",
+          "vin": "3G5DL03G072512345",
+          "household": "BROWN | 7890 BIRCH LN",
           "make": "ASTON MARTIN",
           "model": "DBS",
           "year": "2023",
@@ -101,8 +101,8 @@ export class CarReportService {
         },
         {
           "id": 4043,
-          "vin": "ZHWUC1ZF5FLA01247",
-          "household": "BONHAM | 2655 W 15090 S",
+          "vin": "4T1BF1AK5CU512345",
+          "household": "DAVIS | 2345 CEDAR CT",
           "make": "LAMBORGHINI",
           "model": "HURACAN",
           "year": "2015",
@@ -111,8 +111,8 @@ export class CarReportService {
         },
         {
           "id": 1036,
-          "vin": "ZPBUA1ZL8NLA19802",
-          "household": "BOTT | 1651 E BOX ELDER CIR",
+          "vin": "5TDJKRFH8LS512345",
+          "household": "MILLER | 6789 SPRUCE WAY",
           "make": "LAMBORGHINI",
           "model": "URUS",
           "year": "2022",
@@ -121,8 +121,8 @@ export class CarReportService {
         },
         {
           "id": 4257,
-          "vin": "WP0CD2A9XMS263732",
-          "household": "BIRNKRANT | 275 LOWER EVERGREEN DR",
+          "vin": "6G1YT52G762512345",
+          "household": "WILSON | 4567 WILLOW PL",
           "make": "PORSCHE",
           "model": "911",
           "year": "2021",
@@ -131,8 +131,8 @@ export class CarReportService {
         },
         {
           "id": 4940,
-          "vin": "SBM13GAA6HW001424",
-          "household": "ANDERSON | 3195 E BLUE QUARTZ DR",
+          "vin": "7A3DB3FB8ES512345",
+          "household": "ANDERSON | 8901 HICKORY ST",
           "make": "MCLAREN",
           "model": "570GT",
           "year": "2017",
@@ -141,8 +141,8 @@ export class CarReportService {
         },
         {
           "id": 4864,
-          "vin": "ZFF65LJA6B0181162",
-          "household": "ADAMS | 3220 MILLCREEK RD",
+          "vin": "8AG3D55W74F512345",
+          "household": "TAYLOR | 1230 ASPEN RD",
           "make": "FERRARI",
           "model": "CALIFORNIA",
           "year": "2011",
@@ -151,8 +151,8 @@ export class CarReportService {
         },
         {
           "id": 6765,
-          "vin": "SCFSMGFW6SGN09815",
-          "household": "BELL | 11303 N STONEY BROOK CT",
+          "vin": "9BH4E66X85G512345",
+          "household": "THOMAS | 5671 COTTONWOOD AVE",
           "make": "ASTON MARTIN",
           "model": "VANTAGE",
           "year": "2025",
@@ -161,8 +161,8 @@ export class CarReportService {
         },
         {
           "id": 6006,
-          "vin": "WUASUAFG6F7000725",
-          "household": "BLEADON | 1703 W GRAFTON RD",
+          "vin": "WBADO6732JG512345",
+          "household": "JACKSON | 9012 SYCAMORE DR",
           "make": "AUDI",
           "model": "R8",
           "year": "2015",
@@ -171,8 +171,8 @@ export class CarReportService {
         },
         {
           "id": 3418,
-          "vin": "WP0BB2A98PS233893",
-          "household": "BIAGI | 2145 BEAR HOLLOW DR",
+          "vin": "WBASE7AJ1JH512345",
+          "household": "WHITE | 3456 FRINGE BLVD",
           "make": "PORSCHE",
           "model": "911",
           "year": "2023",
@@ -181,8 +181,8 @@ export class CarReportService {
         },
         {
           "id": 4011,
-          "vin": "W1NYC7HJ6PX487554",
-          "household": "BENZION | 2825 E CRAIG DR",
+          "vin": "WDCGG5GB6LF512345",
+          "household": "HARRIS | 7890 ROCKY TOP",
           "make": "MERCEDES-BENZ",
           "model": "G-CLASS",
           "year": "2023",
@@ -191,8 +191,8 @@ export class CarReportService {
         },
         {
           "id": 4616,
-          "vin": "W1NYC7HJ0PX473584",
-          "household": "ADAMS | 274 S 600 E",
+          "vin": "YDCZZ6ZZ7MG512345",
+          "household": "MARTIN | 2345 SHADOW LN",
           "make": "MERCEDES-BENZ",
           "model": "G-CLASS",
           "year": "2023",
@@ -201,8 +201,8 @@ export class CarReportService {
         },
         {
           "id": 5259,
-          "vin": "WP0BB2A98RS233279",
-          "household": "ALLAK | 7148 S CITY VIEW DRIVE",
+          "vin": "ZHENG5JJHKN512345",
+          "household": "GARCIA | 6789 SUNSET PEAK",
           "make": "PORSCHE",
           "model": "911",
           "year": "2024",
@@ -211,8 +211,8 @@ export class CarReportService {
         },
         {
           "id": 4449,
-          "vin": "WP0BB2A90NS232508",
-          "household": "ANDRUS | 2411 E WALKER LN",
+          "vin": "1HGBH41JXMN512345",
+          "household": "RODRIGUEZ | 4567 CRYSTAL LAKE",
           "make": "PORSCHE",
           "model": "911",
           "year": "2022",
@@ -221,8 +221,8 @@ export class CarReportService {
         },
         {
           "id": 1139,
-          "vin": "WP0BB2A90NS232315",
-          "household": "BERMES | 5651 COVENTRY L",
+          "vin": "2HGEJ6204XM512345",
+          "household": "PATEL | 8901 MOUNTAIN VIEW",
           "make": "PORSCHE",
           "model": "911",
           "year": "2022",
@@ -231,8 +231,8 @@ export class CarReportService {
         },
         {
           "id": 1233,
-          "vin": "W1NYC7HJ3MX418364",
-          "household": "AUGASON | 13106 S RIVERBENDVIEW COVE",
+          "vin": "3HGCM65637M512345",
+          "household": "CHEN | 1230 RIVERSIDE TER",
           "make": "MERCEDES-BENZ",
           "model": "G-CLASS",
           "year": "2021",
@@ -241,8 +241,8 @@ export class CarReportService {
         },
         {
           "id": 2371,
-          "vin": "WP0AF2A77JL141044",
-          "household": "AMACHER | 702 S ALPINE HIGHWAY",
+          "vin": "4HGCP5F80RM512345",
+          "household": "KUMAR | 5671 FOREST GLEN",
           "make": "PORSCHE",
           "model": "PANAMERA",
           "year": "2018",
@@ -356,7 +356,7 @@ export class CarReportService {
   }
 
   public getVinToPlate(vin: string): Observable<CarRecord> {
-    const url = `${this.baseVinToPlateUrl}?vin=${vin}`;
+    const url = `${this.baseVinToPlateUrl}?vin=${'1G1YY22G965112345'}`;
 
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.apiKey}`,        // sending key as header

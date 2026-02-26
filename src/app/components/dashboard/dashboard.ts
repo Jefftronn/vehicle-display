@@ -161,13 +161,13 @@ export class Dashboard implements OnInit, AfterViewInit {
   public getStatusClasses(status: string): string {
     switch (status?.toLowerCase()) {
       case 'new':
-        return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300';
+        return 'bg-green-100 text-green-800';
       case 'action_taken':
-        return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300';
+        return 'bg-yellow-100 text-yellow-800';
       case 'archived':
-        return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
+        return 'bg-red-100 text-red-800';
       default:
-        return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300';
+        return 'bg-gray-100 text-gray-800';
     }
   }
 
@@ -217,7 +217,7 @@ export class Dashboard implements OnInit, AfterViewInit {
   }
 
   viewCarDetails(id: number): void {
-    this.router.navigate(['/vehicle', id.toString()]);
+    this.router.navigate(['/vehicle', '1G1YY22G965112345']);
   }
 
   openArchiveDialog(): void {

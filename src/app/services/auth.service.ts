@@ -61,10 +61,9 @@ export class AuthService {
 
   public login(username: string, password: string, useDummy = true): Observable<any> {
 
-    // --- Dummy data mode ---
     const fakeResponse = {
       jwtToken: 'dummy-jwt-token',
-      jwtTokenExpiresAt: 3600, // 1 hour
+      jwtTokenExpiresAt: 9000,
       username,
       userID: 999,
       userRole: 'tester'
@@ -72,9 +71,8 @@ export class AuthService {
 
     if (useDummy) {
       return of(fakeResponse).pipe(
-        delay(500), // Simulate network delay
+        delay(500),
         tap(response => {
-          // Reuse your existing login logic
           localStorage.setItem(this.tokenKey, response.jwtToken);
 
           const profile: UserProfile = {
@@ -118,7 +116,7 @@ export class AuthService {
 
             this.authStatus.next(true);
 
-            const expiryTimestamp = Date.now() + response.jwtTokenExpiresAt * 1000;
+            const expiryTimestamp = Date.now() + response.jwtTokenExpiresAt * 2000;
             localStorage.setItem(this.expiresKey, expiryTimestamp.toString());
 
             const expiresInMs = expiryTimestamp - Date.now();

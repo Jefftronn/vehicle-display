@@ -1,8 +1,8 @@
 <div *ngIf="carState$ | async as car">
   <div *ngIf="car.loading">
-    <div class="rounded-lg dark:border-gray-700 mt-14 relative" animate.enter="enter-animation">
+    <div class="rounded-lg mt-14 relative" animate.enter="enter-animation">
       <div class="grid mb-4">
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
           <div class="p-4 flex flex-col xl:flex-row gap-8 justify-between">
             <div class="flex gap-8">
               <div class="flex items-center">
@@ -14,7 +14,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Loading
+                  <h3 class="text-2xl font-bold tracking-tight text-gray-900 ">Loading
                   </h3>
                 </div>
               </div>
@@ -25,9 +25,9 @@
     </div>
   </div>
   <div *ngIf="car.error" class="text-red-600">
-    <div class="rounded-lg dark:border-gray-700 mt-14 relative" animate.enter="enter-animation">
+    <div class="rounded-lg mt-14 relative" animate.enter="enter-animation">
       <div class="grid mb-4">
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
           <div class="p-4 flex flex-col xl:flex-row gap-8 justify-between">
             <div class="flex gap-8">
               <div class="flex items-center">
@@ -39,7 +39,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">No Report Available
+                  <h3 class="text-2xl font-bold tracking-tight text-gray-900 ">No Report Available
                   </h3>
                 </div>
               </div>
@@ -51,9 +51,9 @@
   </div>
 
   <div *ngIf="car.car">
-    <div class="all-pages rounded-lg dark:border-gray-700 mt-14 relative" animate.enter="enter-animation">
+    <div class="all-pages rounded-lg mt-14 relative" animate.enter="enter-animation">
       <div class="grid mb-4">
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
           <div class="p-4 flex flex-col xl:flex-row gap-8 justify-between">
             <div class="flex gap-8 items-center">
               <div class="flex items-center">
@@ -65,7 +65,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Vehicle Detail Report
+                  <h3 class="text-2xl font-bold tracking-tight text-gray-900 ">Vehicle Detail Report
                   </h3>
                 </div>
               </div>
@@ -73,15 +73,15 @@
             <div
               class="no-capture flex flex-col md:flex-row space-y-2 md:space-x-3 md:space-y-0 items-stretch md:items-center justify-center xl:justify-end flex-shrink-0">
               <button type="button" (click)="scrollToSection('policy-holders')"
-                class="flex justify-center px-1 py-2.5 text-sm font-medium text-center text-blue-700 bg-white rounded-lg hover:text-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="flex justify-center px-1 py-2.5 text-sm font-medium text-center text-blue-700 bg-white rounded-lg hover:text-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300   ">
                 View Holders
               </button>
               <button type="button" (click)="scrollToSection('title-history')"
-                class="flex justify-center px-1 py-2.5 text-sm font-medium text-center text-blue-700 bg-white rounded-lg hover:text-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="flex justify-center px-1 py-2.5 text-sm font-medium text-center text-blue-700 bg-white rounded-lg hover:text-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300   ">
                 View Title History
               </button>
-              <!-- <button type="button"
-            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+              <button type="button"
+            class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100">
             <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
               fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -91,8 +91,8 @@
           </button>
 
           <button [matMenuTriggerFor]="menu"
-            class="w-full sm:w-auto flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-            <svg class="w-5 h-5 mr-2 text-gray-800 dark:text-white align-middle flex-shrink-0" aria-hidden="true"
+            class="w-full sm:w-auto flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200">
+            <svg class="w-5 h-5 mr-2 text-gray-800  align-middle flex-shrink-0" aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="m19 9-7 7-7-7" />
@@ -109,10 +109,10 @@
             <button mat-menu-item>
               Archive
             </button>
-          </mat-menu> -->
+          </mat-menu>
 
               <button type="button" (click)="printPdf(car.car.vehicleInformation.vin)"
-                class="flex justify-center px-5 py-2.5 text-sm font-medium text-center text-white bg-vistablue-600 rounded-lg hover:bg-vistablue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="flex justify-center px-5 py-2.5 text-sm font-medium text-center text-white bg-vistablue-600 rounded-lg hover:bg-vistablue-700 focus:ring-4 focus:outline-none focus:ring-blue-300   ">
                 Export PDF
               </button>
             </div>
@@ -121,7 +121,7 @@
       </div>
 
       <!-- <div class="grid mb-4">
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
       <div class="p-4 flex justify-between">
         <div class="flex flex-wrap gap-8">
           <div class="flex items-center">
@@ -134,10 +134,10 @@
             </div>
             <div>
               <a>
-                <h3 class="text-lg text-gray-900 dark:text-white">VIN
+                <h3 class="text-lg text-gray-900 ">VIN
                 </h3>
               </a>
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">1C4HJWEG7FL555575
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">1C4HJWEG7FL555575
               </h5>
             </div>
           </div>
@@ -151,10 +151,10 @@
             </div>
             <div>
               <a>
-                <h3 class="text-lg text-gray-900 dark:text-white">License Plate #
+                <h3 class="text-lg text-gray-900 ">License Plate #
                 </h3>
               </a>
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">HJWEG7
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">HJWEG7
               </h5>
             </div>
           </div>
@@ -168,10 +168,10 @@
             </div>
             <div>
               <a>
-                <h3 class="text-lg text-gray-900 dark:text-white">License Plate State
+                <h3 class="text-lg text-gray-900 ">License Plate State
                 </h3>
               </a>
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">NE
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">NE
               </h5>
             </div>
           </div>
@@ -181,7 +181,7 @@
   </div> -->
 
       <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
-        <div class="border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex items-center"
+        <div class="border border-gray-200 rounded-lg shadow-sm  flex items-center"
           style="background-color: #B4ABB2;">
           <div class="p-4">
             <div class="flex items-center">
@@ -194,10 +194,10 @@
               </div>
               <div>
                 <a>
-                  <h3 class="text-lg text-gray-900 dark:text-white">VIN
+                  <h3 class="text-lg text-gray-900 ">VIN
                   </h3>
                 </a>
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> {{
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "> {{
                   car?.car?.vehicleInformation?.vin ?? 'No Information' }}
                 </h5>
               </div>
@@ -205,7 +205,7 @@
           </div>
         </div>
         <div
-          class=" border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex items-center"
+          class=" border border-gray-200 rounded-lg shadow-sm  flex items-center"
           style="background-color: #5E555A;">
           <div class="p-4">
             <div class="flex items-center">
@@ -218,10 +218,10 @@
               </div>
               <div>
                 <a>
-                  <h3 class="text-lg text-white dark:text-white">License Plate #
+                  <h3 class="text-lg text-white ">License Plate #
                   </h3>
                 </a>
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">{{
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white ">{{
                   car?.car?.vehicleInformation?.licensePlate ?? 'No Information' }}
                 </h5>
               </div>
@@ -229,7 +229,7 @@
           </div>
         </div>
         <div
-          class="bg-primary-700 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex items-center">
+          class="bg-primary-700 border border-gray-200 rounded-lg shadow-sm  flex items-center">
           <div class="p-4">
             <div class="flex items-center">
               <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
@@ -241,10 +241,10 @@
               </div>
               <div>
                 <a>
-                  <h3 class="text-lg text-white dark:text-white">License Plate State
+                  <h3 class="text-lg text-white ">License Plate State
                   </h3>
                 </a>
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">{{
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white ">{{
                   car?.car?.vehicleInformation?.licensePlateState ?? 'No Information' }}
                 </h5>
               </div>
@@ -255,65 +255,65 @@
 
       <!-- <div class="single mb-4">
     <section *ngIf="carInfo$ | async as car"
-      class="p-4 bg-white dark:bg-gray-900 antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
+      class="p-4 bg-white  antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
       <div class="mx-auto">
         <div class="">
           <div class="mt-6 sm:mt-8 lg:mt-0">
             <h2 class="text-2xl font-bold">
               Vehicle Information
             </h2>
-            <hr class="my-6 border-gray-200 dark:border-gray-800" />
+            <hr class="my-6 border-gray-200 " />
             <div class="flex flex-col gap-4">
               <div class="">
-                <h1 class="text-4xl font-semibold text-primary-700 dark:text-white">
+                <h1 class="text-4xl font-semibold text-primary-700 ">
                   {{ car?.car?.year }}
                   {{ car?.car?.make }}
                   {{ car?.car?.model }}
                 </h1>
-                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{{
+                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 ">{{
                   plate.entities.vehicles.automobiles[0].license_plate }}
                 </h2>
 
-                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ car?.car?.category }}
                 </p>
                 <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
-                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
+                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl ">
                     {{ car?.car?.prices?.msrp | currency}}
                   </p>
-                  <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
+                  <p class="text-sm font-medium leading-none text-gray-500 ">
                     MRSP
                   </p>
                 </div>
               </div>
             </div>
 
-            <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
+            <hr class="my-6 md:my-8 border-gray-200 " />
 
             <div class="grid grid-cols-2 gap-16 mb-4 border-gray-200">
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Trim
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   Turbo
                 </p>
 
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Series
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   TURBO CABRIOLET
                 </p>
               </div>
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Color
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   PLATINUM WHITE PEARL
                 </p>
 
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Body Style
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   SEDAN
                 </p>
               </div>
@@ -324,39 +324,39 @@
     </section>
   </div> -->
 
-      <!-- <div class="single mb-4">
-    <section *ngIf="carInfo$ | async as car"
-      class="p-4 bg-white dark:bg-gray-900 antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
+      <div class="single mb-4">
+    <section
+      class="p-4 bg-white  antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
       <div class="mx-auto">
         <div class="">
           <div class="mt-6 sm:mt-8 lg:mt-0">
             <h2 class="text-2xl font-bold">
               Vehicle Information
             </h2>
-            <hr class="my-6 border-gray-200 dark:border-gray-800" />
+            <hr class="my-6 border-gray-200 " />
             <div class="flex flex-col gap-4">
-              <div class="">
-                <h1 class="text-4xl font-semibold text-primary-700 dark:text-white">
+              <!-- <div class="">
+                <h1 class="text-4xl font-semibold text-primary-700 ">
                   {{ car?.car?.year }}
                   {{ car?.car?.make }}
                   {{ car?.car?.model }}
                 </h1>
-                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{{
+                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 ">{{
                   plate.entities.vehicles.automobiles[0].license_plate }}
                 </h2>
 
-                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ car?.car?.category }}
                 </p>
                 <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
-                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
+                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl ">
                     {{ car?.car?.prices?.msrp | currency}}
                   </p>
-                  <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
+                  <p class="text-sm font-medium leading-none text-gray-500 ">
                     MRSP
                   </p>
                 </div>
-              </div>
+              </div> -->
 
               <div class="">
                 <div class="shrink-0 mx-auto">
@@ -419,32 +419,32 @@
               </div>
             </div>
 
-            <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
+            <hr class="my-6 md:my-8 border-gray-200 " />
 
             <div class="grid grid-cols-2 gap-16 mb-4 border-gray-200">
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Trim
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   Turbo
                 </p>
 
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Series
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   TURBO CABRIOLET
                 </p>
               </div>
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Color
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   PLATINUM WHITE PEARL
                 </p>
 
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Body Style
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   SEDAN
                 </p>
               </div>
@@ -453,37 +453,37 @@
         </div>
       </div>
     </section>
-  </div> -->
+  </div>
 
       <!-- <div class="single mb-4">
     <section *ngIf="carInfo$ | async as car"
-      class="p-4 bg-white dark:bg-gray-900 antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
+      class="p-4 bg-white  antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
       <div class="mx-auto">
         <div class="">
           <div class="mt-6 sm:mt-8 lg:mt-0">
             <h2 class="text-2xl font-bold">
               Vehicle Information
             </h2>
-            <hr class="my-6 border-gray-200 dark:border-gray-800" />
+            <hr class="my-6 border-gray-200 " />
             <div class="flex flex-col gap-4 mb-8">
               <div class="">
-                <h1 class="text-4xl font-semibold text-primary-700 dark:text-white">
+                <h1 class="text-4xl font-semibold text-primary-700 ">
                   {{ car?.car?.year }}
                   {{ car?.car?.make }}
                   {{ car?.car?.model }}
                 </h1>
-                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{{
+                <h2 *ngIf="carPlate$ | async as plate" class="mb-2 text-xl font-bold text-gray-900 ">{{
                   plate.entities.vehicles.automobiles[0].license_plate }}
                 </h2>
 
-                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ car?.car?.category }}
                 </p>
                 <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
-                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
+                  <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl ">
                     {{ car?.car?.prices?.msrp | currency}}
                   </p>
-                  <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
+                  <p class="text-sm font-medium leading-none text-gray-500 ">
                     MRSP
                   </p>
                 </div>
@@ -492,26 +492,26 @@
 
             <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 mb-4 border-gray-200">
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Trim
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   Turbo
                 </p>
 
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Series
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   TURBO CABRIOLET
                 </p>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Color
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   PLATINUM WHITE PEARL
                 </p>
 
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Body Style
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   SEDAN
                 </p>
               </div>
@@ -582,48 +582,48 @@
   </div> -->
 
       <!-- <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 mb-4">
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
       <div class="p-4">
         <a>
-          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Vehicle Information
+          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 ">Vehicle Information
           </h5>
         </a>
-        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+        <hr class="mb-6 border-gray-200 " />
 
-        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Vehicle
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Vehicle
         </h5>
-        <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">2025 Acura TLX A-Spec.</p>
+        <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl ">2025 Acura TLX A-Spec.</p>
 
-        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Price
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Price
         </h5>
-        <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">$123,000</p>
+        <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl ">$123,000</p>
 
-        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Trim
         </h5>
-        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
           Turbo
         </p>
 
-        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Series
         </h5>
-        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
           TURBO CABRIOLET
         </p>
 
-        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Color
         </h5>
-        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
           PLATINUM WHITE PEARL
         </p>
 
-        <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+        <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Body Style
         </h5>
-        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+        <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
           SEDAN
         </p>
       </div>
     </div>
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
       <div class="p-4">
         <div class="shrink-0 mx-auto">
           <div class="grid gap-4" *ngIf="images.length > 0">
@@ -687,80 +687,80 @@
   </div> -->
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
           <div class="p-4">
             <a>
-              <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Vehicle Information
+              <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 ">Vehicle Information
               </h5>
             </a>
-            <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+            <hr class="mb-6 border-gray-200 " />
 
-            <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Year/Make/Model
+            <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Year/Make/Model
             </h5>
-            <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">{{
+            <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl ">{{
               `${car?.car?.vehicleInformation?.year} ${car?.car?.vehicleInformation?.make}
               ${car?.car?.vehicleInformation?.model}
               ` }}</p>
 
-            <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">MSRP
+            <h5 class="mb-1 text-xl font-semibold text-gray-900 ">MSRP
             </h5>
-            <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
+            <p class="mb-4 text-xl font-semibold text-gray-900 sm:text-2xl ">
               {{ (car?.car?.vehicleInformation?.msrp | currency) ?? 'No Information'}}</p>
 
-            <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Trim
+            <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Trim
             </h5>
-            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
               {{ car?.car?.vehicleInformation?.trim ?? 'No Information' }}
             </p>
 
-            <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Series
+            <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Series
             </h5>
-            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
               {{ car?.car?.vehicleInformation?.series ?? 'No Information' }}
             </p>
 
-            <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Color
+            <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Color
             </h5>
-            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
               {{ car?.car?.vehicleInformation?.color ?? 'No Information' }}
             </p>
 
-            <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Body Style
+            <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Body Style
             </h5>
-            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
               {{ car?.car?.vehicleInformation?.bodyStyle ?? 'No Information' }}
             </p>
           </div>
         </div>
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
           <div class="p-4">
             <a>
-              <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Insurance Policy
+              <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 ">Insurance Policy
                 Details
               </h5>
             </a>
-            <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+            <hr class="mb-6 border-gray-200 " />
 
-            <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Company Name
+            <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Company Name
             </h5>
-            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
               {{ car?.car?.policyInformation?.companyName ?? 'No Information' }}
             </p>
 
 
             <div class="grid grid-cols-2">
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Policy Number
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Policy Number
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ car?.car?.policyInformation?.policyNumber ?? 'No Information' }}
                 </p>
               </div>
 
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Policy Type
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Policy Type
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ car?.car?.policyInformation?.policyType ?? 'No Information'}}
                 </p>
               </div>
@@ -768,17 +768,17 @@
 
             <div class="grid grid-cols-2">
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Effective Date
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Effective Date
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ (car?.car?.policyInformation?.policyEffectiveDate | date) ?? 'No Information' }}
                 </p>
               </div>
 
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Expiration Date
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Expiration Date
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ (car?.car?.policyInformation?.policyExpirationDate | date) ?? 'No Information' }}
                 </p>
               </div>
@@ -786,17 +786,17 @@
 
             <div class="grid grid-cols-2">
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">First Reported Date
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">First Reported Date
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ (car?.car?.policyInformation?.policyFirstReportedDate | date) ?? 'No Information' }}
                 </p>
               </div>
 
               <div>
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Last Reported Date
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Last Reported Date
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ (car?.car?.policyInformation?.policyLastReportedDate | date) ?? 'No Information'}}
                 </p>
               </div>
@@ -806,29 +806,29 @@
       </div>
 
       <div class="single mb-4">
-        <section class="p-4 bg-white dark:bg-gray-900 antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
+        <section class="p-4 bg-white  antialiase border border-gray-200 rounded-lg shadow-sm mb-4">
           <div class="mx-auto">
             <div class="">
               <div class="mt-6 sm:mt-8 lg:mt-0">
                 <a>
-                  <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Address Information
+                  <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 ">Address Information
                   </h5>
                 </a>
-                <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+                <hr class="mb-6 border-gray-200 " />
 
                 <div class="grid grid-cols-2 gap-16 border-gray-200">
                   <div>
-                    <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Garaged Address
+                    <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Garaged Address
                     </h5>
-                    <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                    <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                       {{ `${car?.car?.vehicleInformation?.garagedAddress}, ${car?.car?.vehicleInformation?.garagedCity},
                       ${car?.car?.vehicleInformation?.garagedState}, ${car?.car?.vehicleInformation?.garagedZip}`}}
                     </p>
                   </div>
                   <div>
-                    <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Mailing Address
+                    <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Mailing Address
                     </h5>
-                    <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                    <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                       {{ `${car?.car?.vehicleInformation?.mailingAddress}, ${car?.car?.vehicleInformation?.mailingCity},
                       ${car?.car?.vehicleInformation?.mailingState}, ${car?.car?.vehicleInformation?.mailingZip}` }}
                     </p>
@@ -841,38 +841,38 @@
       </div>
 
       <div id="policy-holders" class="grid mb-4">
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
           <div class="p-4">
             <a>
-              <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Policy Holders
+              <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 ">Policy Holders
               </h5>
             </a>
-            <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+            <hr class="mb-6 border-gray-200 " />
             @for (holder of car?.car?.holderInformation; track $index) {
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-6">
               <div class="">
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Full Name
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Full Name
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ holder?.fullName ?? 'No Information' }}
                 </p>
               </div>
               <div class="">
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Date of Birth
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Date of Birth
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ holder?.dob ?? 'No Information'}}
                 </p>
               </div>
               <div class="">
-                <h5 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">Driver License
+                <h5 class="mb-1 text-xl font-semibold text-gray-900 ">Driver License
                 </h5>
-                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                <p class="mb-4 text-base font-normal text-gray-500 sm:text-xl ">
                   {{ holder?.driverLicenseNumber ?? 'No Information'}}
                 </p>
               </div>
             </div>
-            <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+            <hr class="mb-6 border-gray-200 " />
             } @empty {
             <p>No items found.</p>
             }
@@ -881,13 +881,13 @@
       </div>
 
       <div id="title-history" class="grid mb-4">
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
           <div class="p-4">
             <a>
-              <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">NMVTIS Title History
+              <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 ">NMVTIS Title History
               </h5>
             </a>
-            <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+            <hr class="mb-6 border-gray-200 " />
             @for (record of car?.car?.titleInformation; track $index) {
 
             <div class="grid grid-cols-1 lg:grid-cols-2 mb-6">
@@ -901,10 +901,10 @@
                 </div>
                 <div>
                   <a>
-                    <h3 class="text-lg text-gray-900 dark:text-white">State
+                    <h3 class="text-lg text-gray-900 ">State
                     </h3>
                   </a>
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> {{
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "> {{
                     record?.titleState ??
                     'No Information' }}
                   </h5>
@@ -912,7 +912,7 @@
               </div>
               <div class="flex items-center">
                 <div class="bg-gray-200 h-12 w-12 flex justify-center items-center rounded-full mr-4">
-                  <svg class="w-6 h-6 text-gray-500 dark:text-white" aria-hidden="true"
+                  <svg class="w-6 h-6 text-gray-500 " aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                     <path fill-rule="evenodd"
                       d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
@@ -921,17 +921,17 @@
                 </div>
                 <div>
                   <a>
-                    <h3 class="text-lg text-gray-900 dark:text-white">Date
+                    <h3 class="text-lg text-gray-900 ">Date
                     </h3>
                   </a>
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ (record?.titleDate
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{{ (record?.titleDate
                     |
                     date) ?? 'No Information'}}
                   </h5>
                 </div>
               </div>
             </div>
-            <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+            <hr class="mb-6 border-gray-200 " />
             }
           </div>
         </div>
@@ -939,67 +939,67 @@
 
 
       <!-- <div class="grid grid-cols-4 gap-4 mb-4">
-    <div class="bg-red-500 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="bg-red-500 border border-gray-200 rounded-lg shadow-sm ">
       <div class="p-4">
         <a>
-          <h3 class="text-lg text-gray-900 dark:text-white">Title Date
+          <h3 class="text-lg text-gray-900 ">Title Date
           </h3>
         </a>
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">2014-10-30
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">2014-10-30
         </h5>
       </div>
     </div>
-    <div class="bg-blue-500 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="bg-blue-500 border border-gray-200 rounded-lg shadow-sm ">
       <div class="p-4">
         <a>
-          <h3 class="text-lg text-gray-900 dark:text-white">Title State
+          <h3 class="text-lg text-gray-900 ">Title State
           </h3>
         </a>
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">NE
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">NE
         </h5>
       </div>
     </div>
-    <div class="bg-green-500 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="bg-green-500 border border-gray-200 rounded-lg shadow-sm ">
       <div class="p-4">
         <a>
-          <h3 class="text-lg text-gray-900 dark:text-white">Odometer
+          <h3 class="text-lg text-gray-900 ">Odometer
           </h3>
         </a>
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">112
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">112
         </h5>
       </div>
     </div>
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
       <div class="p-4">
         <a>
-          <h3 class="text-lg text-gray-900 dark:text-white">VIN
+          <h3 class="text-lg text-gray-900 ">VIN
           </h3>
         </a>
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">1C4HJWEG7FL555575
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">1C4HJWEG7FL555575
         </h5>
       </div>
     </div>
   </div> -->
 
       <!-- <div class="grid mb-4">
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm ">
       <div class="p-4">
         <a>
-          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sales History
+          <h5 class="mb-6 text-2xl font-bold tracking-tight text-gray-900 ">Sales History
           </h5>
         </a>
-        <hr class="mb-6 border-gray-200 dark:border-gray-800" />
+        <hr class="mb-6 border-gray-200 " />
 
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing
+        <p class="mb-3 font-normal text-gray-700 ">Lorem ipsum dolor sit amet, consectetur adipiscing
           elit. Donec volutpat est eu tincidunt condimentum. Phasellus non quam sed ligula iaculis maximus vel ut dui.
           Donec vitae ipsum ac leo blandit ultricies eu finibus est</p>
       </div>
     </div>
   </div> -->
 
-      <!-- <div class="single">
+      <div class="single">
         <app-car-report-notes id="car-notes" [carId]="carId"></app-car-report-notes>
-      </div> -->
+      </div>
 
       <app-export-toast></app-export-toast>
     </div>
@@ -1009,7 +1009,7 @@
 <!-- <div data-dial-init class="fixed end-6 bottom-6 group">
   <div id="speed-dial-menu-text-outside-button" class="flex flex-col items-center hidden mb-4 space-y-2">
     <button type="button" (click)="printPdf()"
-      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200  hover:text-gray-900 shadow-xs   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
       <svg class="w-5 h-5 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
         viewBox="0 0 20 20">
         <path
@@ -1020,7 +1020,7 @@
       <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-20 top-1/2 ">Export PDF</span>
     </button>
     <button type="button"
-      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200  hover:text-gray-900 shadow-xs   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
       <svg class="w-5 h-5 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
         viewBox="0 0 18 20">
         <path
@@ -1031,7 +1031,7 @@
       <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -start-20 top-1/2">Copy URL</span>
     </button>
     <button type="button"
-      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200 dark:border-gray-600 hover:text-gray-900 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+      class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-lg border border-gray-200  hover:text-gray-900 shadow-xs   hover:bg-gray-50   focus:ring-4 focus:ring-gray-300 focus:outline-none ">
       <svg class="w-5 h-5 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
         viewBox="0 0 18 20">
         <path
@@ -1044,7 +1044,7 @@
   </div>
   <button type="button" data-dial-toggle="speed-dial-menu-text-outside-button"
     aria-controls="speed-dial-menu-text-outside-button" aria-expanded="false"
-    class="flex items-center justify-center text-white bg-vistablue-600 rounded-lg w-14 h-14 hover:bg-vistablue-700 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    class="flex items-center justify-center text-white bg-vistablue-600 rounded-lg w-14 h-14 hover:bg-vistablue-700   focus:ring-4 focus:ring-blue-300 focus:outline-none ">
     <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />

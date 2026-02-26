@@ -44,7 +44,6 @@ export class ExportService {
       const imgHeight = canvas.height;
       const imgData = canvas.toDataURL('image/png');
 
-      // Scale factor so the image fits the page width
       const scale = usableWidth / imgWidth;
       const renderHeight = imgHeight * scale;
 
@@ -107,7 +106,6 @@ export class ExportService {
 
     const csvContent = [header, ...csvRows].join('\r\n');
 
-    // Trigger download
     setTimeout(() => {
       this.processCSVSubject.next(false);
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
