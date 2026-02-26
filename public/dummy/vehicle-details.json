@@ -1,0 +1,65 @@
+[
+  {
+    "vehicleInformation": {
+      "vin": "1G1YY22G965112345",
+      "licensePlate": "ZQKM91",
+      "licensePlateState": "CO",
+      "make": "TESLA",
+      "model": "MODEL S",
+      "year": "2022",
+      "bodyStyle": "SEDAN",
+      "color": "MIDNIGHT BLUE",
+      "trim": "PERFORMANCE",
+      "series": "PLAID",
+      "garagedAddress": "842 N MAIN ST",
+      "garagedCity": "DENVER",
+      "garagedState": "CO",
+      "garagedZip": "80202",
+      "mailingAddress": "842 N MAIN ST",
+      "mailingCity": "DENVER",
+      "mailingState": "CO",
+      "mailingZip": "80202",
+      "msrp": 285000
+    },
+    "policyInformation": {
+      "companyName": "ALLSTATE INSURANCE COMPANY",
+      "policyNumber": "847362910",
+      "policyType": "PERSONAL",
+      "policyEffectiveDate": "3/15/2024",
+      "policyExpirationDate": "3/15/2025",
+      "policyFirstReportedDate": "4/2/2023",
+      "policyLastReportedDate": "9/10/2025"
+    },
+    "holderInformation": [
+      {
+      "fullName": "ALEX JOHNSON",
+      "driverLicenseNumber": "827364501",
+      "dob": "8/14/1982"
+      },
+      {
+      "fullName": "JORDAN SMITH",
+      "driverLicenseNumber": "934627581",
+      "dob": "3/22/1985"
+      },
+      {
+      "fullName": "CASEY WILLIAMS",
+      "driverLicenseNumber": "712538469",
+      "dob": "11/5/1990"
+      }
+    ],
+    "titleInformation": [
+      {
+      "titleDate": "2/20/2022",
+      "titleState": "TX"
+      },
+      {
+      "titleDate": "5/10/2021",
+      "titleState": "CO"
+      },
+      {
+      "titleDate": "8/15/2020",
+      "titleState": "CA"
+      }
+    ]
+  }
+]

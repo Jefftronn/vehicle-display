@@ -1,46 +1,45 @@
 <section
-  class="bg-center bg-no-repeat bg-cover bg-[url('/images/road-mountain.jpg')] bg-blend-multiply min-h-screen flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 dark:bg-gray-900">
+  class="bg-center bg-no-repeat bg-cover bg-[url('/images/road-mountain.jpg')] bg-blend-multiply min-h-screen flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
   <div
-    class="w-full bg-white rounded-lg shadow-2xl dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+    class="w-full bg-white rounded-lg shadow-2xl md:mt-0 sm:max-w-md xl:p-0">
     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
       <a class="flex justify-center mb-6 text-2xl font-semibold text-white">
-        <img class="h-10 mr-2" src="/images/logo.png" alt="logo">
+        <img class="h-14 mr-2" src="/images/jeffe-logo-1.png" alt="logo">
       </a>
-      <h1 class="text-xl md:text-2xl font-bold leading-tight tracking-tight text-gray-900  dark:text-white">
+      <h1 class="text-xl md:text-2xl font-bold leading-tight tracking-tight text-gray-900  ">
         Sign in to your account
       </h1>
       <form class="space-y-4 md:space-y-6" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div>
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your
             username</label>
-          <input type="email" name="email" id="email" formControlName="username" [disabled]="loading"
+          <input type="email" name="email" id="email" formControlName="username"
             [class.border-red-500]="loginForm.controls.username.touched && loginForm.controls.username.invalid"
-            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
             placeholder="Username">
           <p *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched"
-            class="mt-2 text-sm text-red-600 dark:text-red-500">
+            class="mt-2 text-sm text-red-600">
             Please enter your username
           </p>
         </div>
         <div>
-          <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
           <input type="password" name="password" id="password" placeholder="••••••••" formControlName="password"
-            [disabled]="loading"
-            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
             required="">
           <p *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched"
-            class="mt-2 text-sm text-red-600 dark:text-red-500">
+            class="mt-2 text-sm text-red-600">
             Please enter your password
           </p>
         </div>
         <div class="flex justify-end">
           <a (click)="openResetPasswordModal(true)"
-            class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Reset
+            class="text-sm font-medium text-primary-600 hover:underline">Reset
             password?</a>
         </div>
         <div class="flex justify-center">
-          <button type="submit" [disabled]="!loginForm.valid || loading"
-            class="px-5 py-2.5 text-white bg-vistablue-600 hover:bg-vistablue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-primary-800 disabled:opacity-50 disabled:cursor-not-allowed">
+          <button type="submit" [disabled]="loginForm.invalid || loading"
+            class="px-5 py-2.5 text-white bg-vistablue-600 hover:bg-vistablue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center disabled:opacity-50 disabled:cursor-not-allowed">
             {{ loading ? 'Logging in...' : 'Login' }}
           </button>
         </div>

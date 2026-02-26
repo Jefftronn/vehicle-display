@@ -54,7 +54,6 @@ export class ResetPasswordModal implements OnInit {
 
   ngOnInit(): void {
     this.resetPasswordForm.get('password')?.valueChanges.subscribe((value) => {
-      console.log(this.resetPasswordForm.value.username)
       const errors = this.resetPasswordForm.get('password')?.errors;
 
       if (!value) {

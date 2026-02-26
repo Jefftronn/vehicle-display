@@ -26,7 +26,7 @@ export class ExportService {
     this.processPDFSubject.next(value);
   }
 
-  exportAllToPDF(pages: HTMLElement) {
+  exportAllToPDF(pages: HTMLElement, exportingFrom: string, vehicleVin: string) {
     // this.processPDFSubject.next(true);
     const pdf = new jsPDF('p', 'mm', 'a4');
     const pageWidth = pdf.internal.pageSize.getWidth();
@@ -44,7 +44,6 @@ export class ExportService {
       const imgHeight = canvas.height;
       const imgData = canvas.toDataURL('image/png');
 
-      // Scale factor so the image fits the page width
       const scale = usableWidth / imgWidth;
       const renderHeight = imgHeight * scale;
 
@@ -64,7 +63,11 @@ export class ExportService {
       }
       setTimeout(() => {
         this.processPDFSubject.next(false);
-        pdf.save('pdf-export.pdf');
+        if (exportingFrom === 'dashboard') {
+          pdf.save(`noncompliant-vehicle-list.pdf`);
+        } else if (exportingFrom === 'details') {
+          pdf.save(`noncompliant-vehicle-detail-vin-${vehicleVin}.pdf`);
+        }
         this.completePDFSubject.next(true);
       }, 2000);
 
@@ -103,14 +106,13 @@ export class ExportService {
 
     const csvContent = [header, ...csvRows].join('\r\n');
 
-    // Trigger download
     setTimeout(() => {
       this.processCSVSubject.next(false);
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'car-report.csv');
+      link.setAttribute('download', 'noncompliant-vehicle-list.csv');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

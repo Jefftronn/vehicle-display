@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CarReportService } from '../../services/car-report.service';
-import { map, Observable } from 'rxjs';
-import { Automobile, CarRecord } from '../../models/car-record.model';
+import { map, Observable, filter, switchMap, startWith, catchError, of } from 'rxjs';
+import { Automobile, CarRecord, VehicleDetail } from '../../models/car-record.model';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { CarReportNotes } from '../car-report-notes/car-report-notes';
 import { ExportService } from '../../services/export.service';
@@ -13,6 +13,11 @@ import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 import { ExportToast } from "../export-toast/export-toast";
 
 declare const initFlowbite: any; // Flowbite exposes this globally when using CDN
+interface CarState {
+  loading: boolean;
+  error: string | null;
+  car: VehicleDetail | null;
+}
 
 @Component({
   selector: 'app-car-report-detail',
@@ -21,39 +26,45 @@ declare const initFlowbite: any; // Flowbite exposes this globally when using CD
   styleUrl: './car-report-detail.css',
 })
 export class CarReportDetail implements OnInit {
-  public carVin: string = '';
+  public carId: string = '';
   public loading$!: Observable<boolean>;
   public error$!: Observable<string | null>;
   public fullReport$!: Observable<CarRecord | undefined>;
-  public carInfo$!: Observable<Automobile | undefined>;
+  public carInfo?: VehicleDetail | null;
+  public carState$: Observable<CarState>;
   public currentFeatImage$?: Observable<string | undefined>;
   public carPlate$!: Observable<CarRecord | undefined>;
   @ViewChild('thumbsContainer', { static: false }) thumbsContainer!: ElementRef<HTMLDivElement>;
 
-  images: string[] = [];
+  images: string[] = [
+  'https://images.unsplash.com/photo-1503376780353-7e6692767b70',
+  'https://images.unsplash.com/photo-1511919884226-fd3cad34687c',
+  'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d',
+  'https://images.unsplash.com/photo-1493238792000-8113da705763',
+  'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023',
+  'https://images.unsplash.com/photo-1502877338535-766e1452684a',
+  'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf'
+];
   currentIndex = 0;
 
-  constructor(private route: ActivatedRoute, private carReportService: CarReportService, private exportService: ExportService) { }
+  constructor(private route: ActivatedRoute, private carReportService: CarReportService, private exportService: ExportService) {
+    this.carState$ = this.route.paramMap.pipe(
+      switchMap(params => {
+        const id = params.get('id');
+        if (!id) {
+          return of({ loading: false, error: 'No car ID provided', car: null });
+        }
+
+        return this.carReportService.getCarReportByVin(id).pipe(
+          map(car => ({ loading: false, error: null, car })),
+          startWith({ loading: true, error: null, car: null }),
+          catchError(err => of({ loading: false, error: 'Failed to load car info', car: null }))
+        );
+      })
+    );
+  }
 
   ngOnInit(): void {
-    this.loading$ = this.carReportService.loading$;
-    this.error$ = this.carReportService.error$;
-
-    const vin = this.route.snapshot.paramMap.get('vin');
-    if (vin) {
-      this.carVin = vin;
-      this.fullReport$ = this.carReportService.getCarReportById(vin);
-      this.carPlate$ = this.carReportService.getVinToPlate(vin)
-      this.carInfo$ = this.fullReport$.pipe(
-        map(report => {
-          const auto = report?.entities?.vehicles?.automobiles?.[0];
-          this.images = auto?.images?.map(i => i.url) ?? [];
-          this.images = [...this.images, ...this.images, ...this.images];
-          setTimeout(() => initFlowbite(), 0);
-          return auto;
-        })
-      );
-    }
   }
 
   setCurrent(i: number) {
@@ -95,12 +106,12 @@ export class CarReportDetail implements OnInit {
     }
   }
 
-  printPdf() {
+  printPdf(vin: string) {
     this.exportService.setProcessPDF(true);
 
     const pages = document.querySelector('.all-pages') as HTMLElement;
     if (pages) {
-      this.exportService.exportAllToPDF(pages);
+      this.exportService.exportAllToPDF(pages, "details", vin);
     } else {
       console.error("No element found with .all-pages");
     }

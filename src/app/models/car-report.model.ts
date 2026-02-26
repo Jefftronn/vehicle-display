@@ -1,10 +1,10 @@
 export interface CarReport {
+  id: number,
   vin: string,
+  household: string,
   make: string;
   model: string;
-  year: number;
+  year: string;
   msrp: number;
-  licensePlateState: string;
-  yearRegistered: number;
-  status: string;
+  batch: number;
 }
